@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="簡歷">
+		                簡歷
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="標簽">
+		                標簽
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/linux.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Linux 學習筆記(一)</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>最近剛開始通過慕課網(<a href="https://coding.imooc.com/class/154.html)學習" target="_blank" rel="noopener">https://coding.imooc.com/class/154.html)學習</a> Linux，光安裝就花了不少心思，爬了不少文章。這邊先將我第一天的學習筆記整理在這。一直到上完課應該是能出個三四篇學習筆記吧!</p>
+<h1 id="Linux-簡介"><a href="#Linux-簡介" class="headerlink" title="Linux 簡介"></a>Linux 簡介</h1><h2 id="Linux-是什麼"><a href="#Linux-是什麼" class="headerlink" title="Linux 是什麼"></a>Linux 是什麼</h2><ul>
+<li>Linux 是一種自由和開放原始碼的類 UNIX 作業系統</li>
+<li>Linux 嚴格來講是單指作業系統的核心，因作業系統中包含了許多用戶圖形和其他實用工具</li>
+<li>常見的 Linux 發行版包刮 Red Hat Enterprise Linux, CentOS 或 Ubuntu 等</li>
+</ul>
+<h2 id="Linux-能做什麼"><a href="#Linux-能做什麼" class="headerlink" title="Linux 能做什麼"></a>Linux 能做什麼</h2><ul>
+<li>企業服務器</li>
+<li>嵌入式開發</li>
+</ul>
+<h2 id="與-Windows-有甚麼不同"><a href="#與-Windows-有甚麼不同" class="headerlink" title="與 Windows 有甚麼不同"></a>與 Windows 有甚麼不同</h2><ul>
+<li>沒有 exe 安裝程序</li>
+<li>大小寫是要區分的</li>
+<li>一切皆文件</li>
+<li>文件後綴名不是那麼重要，只是為了好識別而已</li>
+</ul>
+<h1 id="CentOS-的安裝"><a href="#CentOS-的安裝" class="headerlink" title="CentOS 的安裝"></a>CentOS 的安裝</h1><h2 id="虛擬機是什麼"><a href="#虛擬機是什麼" class="headerlink" title="虛擬機是什麼"></a>虛擬機是什麼</h2><ul>
+<li>科研解釋: 虛擬機 (Virtual Machine) 是指通過軟件模擬的具有完整硬件系統功能的、運行在一個完全隔離環境中的完整計算機系統</li>
+<li>白話解釋: 通過軟件技術，可以在自己的電腦上安裝另一個操作系統，而不影響原生系統</li>
+</ul>
+<h2 id="虛擬機軟件"><a href="#虛擬機軟件" class="headerlink" title="虛擬機軟件"></a>虛擬機軟件</h2><ul>
+<li>VirtualBox</li>
+<li>vmware</li>
+</ul>
+<h2 id="安裝虛擬機"><a href="#安裝虛擬機" class="headerlink" title="安裝虛擬機"></a>安裝虛擬機</h2><ul>
+<li>下載 VirtualBox (V5.2.16): <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a></li>
+<li>下載 XShell (Win): <a href="https://www.netsarang.com/download/software.html" target="_blank" rel="noopener">https://www.netsarang.com/download/software.html</a></li>
+</ul>
+<h2 id="虛擬機軟件安裝-CentOS"><a href="#虛擬機軟件安裝-CentOS" class="headerlink" title="虛擬機軟件安裝 CentOS"></a>虛擬機軟件安裝 CentOS</h2><ul>
+<li>官方下載地址: <a href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1804.iso" target="_blank" rel="noopener">http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1804.iso</a></li>
+</ul>
+<h2 id="雲服務器的平台"><a href="#雲服務器的平台" class="headerlink" title="雲服務器的平台"></a>雲服務器的平台</h2><ul>
+<li>阿里雲: <a href="https://www.aliyun.com" target="_blank" rel="noopener">https://www.aliyun.com</a></li>
+<li>騰訊雲: <a href="https://cloud.tencent.com" target="_blank" rel="noopener">https://cloud.tencent.com</a></li>
+</ul>
+<h1 id="準備工作與遠程連接-SSH"><a href="#準備工作與遠程連接-SSH" class="headerlink" title="準備工作與遠程連接 SSH"></a>準備工作與遠程連接 SSH</h1><h2 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h2><ul>
+<li>查看ip<ul>
+<li>ifconfig</li>
+<li>ip addr</li>
+<li>vi /etc/sysconfig/network-scripts/ifcfg-xx</li>
+<li>yum install net-tools</li>
+</ul>
+</li>
+<li>替換默認源<ul>
+<li><a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">http://mirrors.163.com/.help/centos.html</a></li>
+</ul>
+</li>
+<li>安裝 Vim<ul>
+<li>輸入 yum install vim</li>
+</ul>
+</li>
+</ul>
+<h1 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h1><h2 id="SSH-是甚麼"><a href="#SSH-是甚麼" class="headerlink" title="SSH 是甚麼"></a>SSH 是甚麼</h2><ul>
+<li>SSH: Secure Shell 安全外殼協議</li>
+<li>建立在應用層基礎上的安全協議</li>
+<li>可靠，專為遠程登錄會話和其他網絡服務提供安全性的協議</li>
+<li>有效防止遠程管理過程中的信息洩露問題</li>
+<li>SSH 客戶端適用於多種平台</li>
+<li>SSH 服務端幾乎支持所有 UNIX 平台</li>
+</ul>
+<h2 id="服務器安裝-SSH-服務"><a href="#服務器安裝-SSH-服務" class="headerlink" title="服務器安裝 SSH 服務"></a>服務器安裝 SSH 服務</h2><ul>
+<li>安裝 SSH<ul>
+<li>yum install openssh-server</li>
+</ul>
+</li>
+<li>啟動 SSH<ul>
+<li>service sshd start</li>
+</ul>
+</li>
+<li>設置開機運行<ul>
+<li>chkconfig sshd on</li>
+</ul>
+</li>
+</ul>
+<h2 id="客戶端安裝-SSH-工具"><a href="#客戶端安裝-SSH-工具" class="headerlink" title="客戶端安裝 SSH 工具"></a>客戶端安裝 SSH 工具</h2><ul>
+<li>SSH 是典型的客戶端和服務端的交互模式，客戶端廣泛的支持各個平台</li>
+<li>Windows 有很多工具可以支持 SSH 連接功能，例如: XShell, Putty, secureCRT</li>
+<li>Linux 平台需要安裝客戶端軟件<ul>
+<li>yum install openssh-clients</li>
+</ul>
+</li>
+</ul>
+<h2 id="SSH-config-講解"><a href="#SSH-config-講解" class="headerlink" title="SSH config 講解"></a>SSH config 講解</h2><ul>
+<li>config 為了方便我們批量多個 ssh</li>
+<li>config 存放在 ~/.ssh/config</li>
+<li>config 配置語法</li>
+</ul>
+<h2 id="SSH-config-語法關鍵字"><a href="#SSH-config-語法關鍵字" class="headerlink" title="SSH config 語法關鍵字"></a>SSH config 語法關鍵字</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">Host</th>
+<th style="text-align:center">別名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HostName</td>
+<td style="text-align:center">主機名</td>
+</tr>
+<tr>
+<td style="text-align:center">Port</td>
+<td style="text-align:center">端口</td>
+</tr>
+<tr>
+<td style="text-align:center">User</td>
+<td style="text-align:center">用戶名</td>
+</tr>
+<tr>
+<td style="text-align:center">IdentityFile</td>
+<td style="text-align:center">密鑰文件的路徑</td>
+</tr>
+</tbody>
+</table>
+<h2 id="SSH-安全免密登錄-ssh-key"><a href="#SSH-安全免密登錄-ssh-key" class="headerlink" title="SSH 安全免密登錄: ssh key"></a>SSH 安全免密登錄: ssh key</h2><ul>
+<li>ssh key 使用非對稱加密方式生成公鑰和私鑰</li>
+<li>私鑰存放在本地 ~/.ssh 目錄</li>
+<li>公鑰可以對外公開，放在服務器的 ~/.ssh/authorized_keys</li>
+</ul>
+<h2 id="Linux-平台生成-ssh-key"><a href="#Linux-平台生成-ssh-key" class="headerlink" title="Linux 平台生成 ssh key"></a>Linux 平台生成 ssh key</h2><ul>
+<li>ssh-keygen -t rsa</li>
+<li>ssh-keygen -t dsa</li>
+</ul>
+<h2 id="SSH-安全端口"><a href="#SSH-安全端口" class="headerlink" title="SSH 安全端口"></a>SSH 安全端口</h2><ul>
+<li><p>端口安全指的是盡量避免服務器的遠程連接端口被不法份子知道，為此而改變默認服務端口號的操作</p>
+</li>
+<li><p>如何改變 SSH 服務端口</p>
+<p>修改 /etc/ssh/sshd_config 配置</p>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
