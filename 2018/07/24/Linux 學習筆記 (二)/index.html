@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/操作系統/">操作系統</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="簡歷">
+		                簡歷
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="標簽">
+		                標簽
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/linux.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Linux 學習筆記 (二)</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="Linux-常用命令"><a href="#Linux-常用命令" class="headerlink" title="Linux 常用命令"></a><strong>Linux</strong> 常用命令</h1><h2 id="軟件操作命令"><a href="#軟件操作命令" class="headerlink" title="軟件操作命令"></a>軟件操作命令</h2><ul>
+<li>軟件包管理器: yum</li>
+<li>安裝軟件: yum install xxx</li>
+<li>卸載軟件: yum remove xxx</li>
+<li>搜索軟件: yum search xxx</li>
+<li>清理緩存: yum clean packages</li>
+<li>列出已安裝: yum list</li>
+<li>軟件包信息: yum info xxx</li>
+</ul>
+<h2 id="服務器硬件資源信息"><a href="#服務器硬件資源信息" class="headerlink" title="服務器硬件資源信息"></a>服務器硬件資源信息</h2><ul>
+<li>內存: free -m</li>
+<li>硬盤: df -h</li>
+<li>負載: w/top</li>
+<li>cpu 個數和核數: cat /proc/cpuinfo (cat 命令用於連接文件並打印號標準輸出設備上)</li>
+<li>fdisk: 觀察硬碟實體使用情形</li>
+</ul>
+<h2 id="Linux文件目錄結構"><a href="#Linux文件目錄結構" class="headerlink" title="Linux文件目錄結構"></a><strong>Linux</strong>文件目錄結構</h2><ul>
+<li>根目錄 /</li>
+<li>家目錄 /home</li>
+<li>臨時目錄 /tmp</li>
+<li>配置目錄 /etc</li>
+<li>用戶程序目錄 /usr</li>
+</ul>
+<p><img src="C:\Users\asus\Pictures\Camera Roll\Other\linux 2.png" alt="文件目錄結構"></p>
+<h2 id="文件操作基本命令"><a href="#文件操作基本命令" class="headerlink" title="文件操作基本命令"></a>文件操作基本命令</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">解釋</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ls</td>
+<td style="text-align:center">查看目錄下的文件</td>
+</tr>
+<tr>
+<td style="text-align:center">touch</td>
+<td style="text-align:center">新建文件</td>
+</tr>
+<tr>
+<td style="text-align:center">mkdir</td>
+<td style="text-align:center">新建文件夾</td>
+</tr>
+<tr>
+<td style="text-align:center">cd</td>
+<td style="text-align:center">進入目錄</td>
+</tr>
+<tr>
+<td style="text-align:center">rm</td>
+<td style="text-align:center">刪除文件和目錄</td>
+</tr>
+<tr>
+<td style="text-align:center">cp</td>
+<td style="text-align:center">複製</td>
+</tr>
+<tr>
+<td style="text-align:center">mv</td>
+<td style="text-align:center">移動</td>
+</tr>
+<tr>
+<td style="text-align:center">pwd</td>
+<td style="text-align:center">顯示路徑</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Linux-文本編輯器-Vim"><a href="#Linux-文本編輯器-Vim" class="headerlink" title="Linux 文本編輯器: Vim"></a>Linux 文本編輯器: Vim</h2><ul>
+<li>在服務器上我們是沒有類 Windows 的操作介面的，所有 GUI 介面都無法使用</li>
+<li>Vim 是最出名的 Linux 文本編輯器，可以對文件修改操作</li>
+<li>Vim 安裝: yum install vim</li>
+</ul>
+<h2 id="文件權限-4-2-1"><a href="#文件權限-4-2-1" class="headerlink" title="文件權限 4-2-1"></a>文件權限 4-2-1</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">權限</th>
+<th style="text-align:center">數字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">w</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p><img src="C:\Users\asus\Pictures\Camera Roll\Other\linux.png" alt="文件權限"></p>
+<h2 id="文件搜索、查找、讀取"><a href="#文件搜索、查找、讀取" class="headerlink" title="文件搜索、查找、讀取"></a>文件搜索、查找、讀取</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">解釋</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">tail</td>
+<td style="text-align:center">從文件尾部開始讀</td>
+</tr>
+<tr>
+<td style="text-align:center">head</td>
+<td style="text-align:center">從文件頭部讀</td>
+</tr>
+<tr>
+<td style="text-align:center">cat</td>
+<td style="text-align:center">讀取整個文件</td>
+</tr>
+<tr>
+<td style="text-align:center">more</td>
+<td style="text-align:center">分頁讀取</td>
+</tr>
+<tr>
+<td style="text-align:center">less</td>
+<td style="text-align:center">可控分頁</td>
+</tr>
+<tr>
+<td style="text-align:center">grep</td>
+<td style="text-align:center">搜索關鍵字</td>
+</tr>
+<tr>
+<td style="text-align:center">find</td>
+<td style="text-align:center">查找文件</td>
+</tr>
+<tr>
+<td style="text-align:center">wc</td>
+<td style="text-align:center">統計個數</td>
+</tr>
+</tbody>
+</table>
+<h2 id="文件解壓縮"><a href="#文件解壓縮" class="headerlink" title="文件解壓縮"></a>文件解壓縮</h2><ul>
+<li>tar 命令</li>
+</ul>
+<h2 id="系統用戶操作命令"><a href="#系統用戶操作命令" class="headerlink" title="系統用戶操作命令"></a>系統用戶操作命令</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">解釋</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">useradd</td>
+<td style="text-align:center">添加用戶</td>
+</tr>
+<tr>
+<td style="text-align:center">adduser</td>
+<td style="text-align:center">添加用戶</td>
+</tr>
+<tr>
+<td style="text-align:center">userdel</td>
+<td style="text-align:center">刪除用戶</td>
+</tr>
+<tr>
+<td style="text-align:center">passwd</td>
+<td style="text-align:center">設置密碼</td>
+</tr>
+</tbody>
+</table>
+<h2 id="防火牆設置"><a href="#防火牆設置" class="headerlink" title="防火牆設置"></a>防火牆設置</h2><ul>
+<li>作用: 保護服務器安全</li>
+<li>設置防活牆規則<ul>
+<li>開放80, 22端口</li>
+</ul>
+</li>
+<li>關閉防火牆</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">指令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">yum install firewalld</td>
+<td style="text-align:center">安裝</td>
+</tr>
+<tr>
+<td style="text-align:center">service firewalld start</td>
+<td style="text-align:center">啟動</td>
+</tr>
+<tr>
+<td style="text-align:center">service firewalld status</td>
+<td style="text-align:center">檢查狀態</td>
+</tr>
+<tr>
+<td style="text-align:center">service firewalld stop/disable</td>
+<td style="text-align:center">關閉或禁用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="提權和文件上傳下載操作"><a href="#提權和文件上傳下載操作" class="headerlink" title="提權和文件上傳下載操作"></a>提權和文件上傳下載操作</h2><ul>
+<li>提權: sudo<ul>
+<li>visudo</li>
+</ul>
+</li>
+<li>文件下載<ul>
+<li>wget, curl</li>
+</ul>
+</li>
+<li>文件上傳<ul>
+<li>scp<ul>
+<li>scp <a href="mailto:jack@192.168.182.50" target="_blank" rel="noopener">jack@192.168.182.50</a>:/tmp/jack.txt ./</li>
+<li>scp jack.txt <a href="mailto:jack@192.168.182.50" target="_blank" rel="noopener">jack@192.168.182.50</a>:/tmp/</li>
+</ul>
+</li>
+<li>xshell (windows)<ul>
+<li>sudo yum install lrzsz</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
