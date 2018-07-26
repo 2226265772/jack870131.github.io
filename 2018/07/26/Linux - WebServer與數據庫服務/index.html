@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="簡歷">
+		                簡歷
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="標簽">
+		                標簽
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/linux.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Linux - WebServer與數據庫服務</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="WebServer"><a href="#WebServer" class="headerlink" title="WebServer"></a>WebServer</h1><h2 id="常用軟件"><a href="#常用軟件" class="headerlink" title="常用軟件"></a>常用軟件</h2><ul>
+<li>Nginx</li>
+<li>Apache</li>
+</ul>
+<h2 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">解釋</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安裝</td>
+<td style="text-align:center">yum install httpd</td>
+</tr>
+<tr>
+<td style="text-align:center">啟動</td>
+<td style="text-align:center">service httpd start</td>
+</tr>
+<tr>
+<td style="text-align:center">停止</td>
+<td style="text-align:center">service httpd stop</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">解釋</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安裝</td>
+<td style="text-align:center">yum install nginx</td>
+</tr>
+<tr>
+<td style="text-align:center">啟動</td>
+<td style="text-align:center">service nginx start</td>
+</tr>
+<tr>
+<td style="text-align:center">停止</td>
+<td style="text-align:center">service nginx stop</td>
+</tr>
+<tr>
+<td style="text-align:center">重載</td>
+<td style="text-align:center">service nginx reload</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Nginx-安裝"><a href="#Nginx-安裝" class="headerlink" title="Nginx 安裝"></a>Nginx 安裝</h3><ul>
+<li>添加 CentOS 7 Nginx yum 資源庫<ul>
+<li>sudo rpm -Uvh <a href="http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm" target="_blank" rel="noopener">http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</a></li>
+</ul>
+</li>
+<li>sudo yum install -y nginx</li>
+</ul>
+<h2 id="反向代理和負載均衡"><a href="#反向代理和負載均衡" class="headerlink" title="反向代理和負載均衡"></a>反向代理和負載均衡</h2><p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/nginx.jpg?raw=true" alt="反向代理和負載均衡"></p>
+<h1 id="數據庫服務"><a href="#數據庫服務" class="headerlink" title="數據庫服務"></a>數據庫服務</h1><h2 id="MySQL-安裝與鏈接"><a href="#MySQL-安裝與鏈接" class="headerlink" title="MySQL 安裝與鏈接"></a>MySQL 安裝與鏈接</h2><ul>
+<li>CentOS7 默認安裝 mariadb 數據庫<ul>
+<li>移除: yum remove mariadb-libs.x86_64</li>
+</ul>
+</li>
+<li>下載 MySQL 源<ul>
+<li><a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/repo/yum/</a></li>
+</ul>
+</li>
+<li>安裝源<ul>
+<li>yum localinstall mysql57-community-release-el7-8.noarch.rpm</li>
+</ul>
+</li>
+<li>安裝 MySQL<ul>
+<li>yum install mysql-community-server</li>
+</ul>
+</li>
+<li>默認密碼<ul>
+<li>cat /var/log/mysqld.log | grep “password”</li>
+</ul>
+</li>
+</ul>
+<h2 id="MySQL-客戶端工具"><a href="#MySQL-客戶端工具" class="headerlink" title="MySQL 客戶端工具"></a>MySQL 客戶端工具</h2><ul>
+<li>SQLyog</li>
+<li>Navicat</li>
+<li>HeidiSQL</li>
+<li>Sequal Pro</li>
+<li>phpMyadmin</li>
+</ul>
+<h2 id="數據庫基本操作"><a href="#數據庫基本操作" class="headerlink" title="數據庫基本操作"></a>數據庫基本操作</h2><ul>
+<li><p>數據庫重製密碼:</p>
+<p><a href="https://stackoverflow.com/questions/33467337/reset-mysql-root-password-using-alter-user-statement-after-install-on-mac" target="_blank" rel="noopener">https://stackoverflow.com/questions/33467337/reset-mysql-root-password-using-alter-user-statement-after-install-on-mac</a></p>
+</li>
+<li><p>設置 root 可以遠程連接</p>
+<p>update ‘user’ set Host = “%“ where User=‘root’ and Host=‘localhost’;</p>
+<p>flush privileges; 刷新 or sudo service mysqld restart 重啟</p>
+</li>
+<li><p>關閉防火牆</p>
+<p>sudo service firewalld stop</p>
+</li>
+<li><p>MySQL 開啟 general_log 跟蹤數據執行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 設置 general log 保存路徑</span><br><span class="line"># 注意在 Linux 中只能設置道 /tmp 或 /var 文件夾下，設置其他路徑出錯</span><br><span class="line"># 需要 root 用戶才有訪問此文件的權限</span><br><span class="line">mysql&gt; set global general_log file=&apos;/tmp/general.log&apos;;</span><br><span class="line"></span><br><span class="line"># 開啟 general log 模式</span><br><span class="line">mysql&gt; set global general_log=on;</span><br><span class="line"></span><br><span class="line"># 關閉 general log 模式</span><br><span class="line">mysql&gt; set global general_log=off;</span><br></pre></td></tr></table></figure>
+<p>在 general log 模式開啟過程中，所有對數據庫的操作都將被記錄在 general.log 文件</p>
+</li>
+<li><p>新建用戶</p>
+<p>CREATE USER ‘jack’@‘%’ IDENTIFIED BY ‘123456’;</p>
+</li>
+<li><p>賦予權限</p>
+<p>GRANT ALL PRIVILEGES ON *.* TO ‘jack‘@’%’ IDENTIFIED BY ‘123456’ WITH GRANT OPTION;</p>
+<p>GRANT select,insert,update,delete ON *.* TO ‘jack‘@’%’ IDENTIFIED BY ‘123456’ WITH GRANT OPTION;</p>
+<p>FLUSH PRIVILEGES;</p>
+</li>
+<li><p>收回權限</p>
+<p>REVOKE ALL PRIVILEGES ON *.* FROM jack;</p>
+<p>FLUSH PRIVILEGES;</p>
+</li>
+<li><p>忘記 root 密碼</p>
+<p>在 /etc/my.cnf 加入 skip-grant-tables</p>
+<p>use mysql;</p>
+<p>update user set authentication string=password(‘123456’) where user=‘root’;</p>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
