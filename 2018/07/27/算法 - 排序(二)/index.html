@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="簡歷">
+		                簡歷
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="標簽">
+		                標簽
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/algorithm.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >算法 - 排序(二)</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><ul>
+<li><p>快速排序的主要思想: </p>
+<p>先選取合適的數字作為排序基準點，將數組分割為兩部分</p>
+<p>其中一部分的數字比基準點小，另一部分反之</p>
+<p>遞歸進行排序，每次排序完判斷數組是否已排序完成</p>
+</li>
+<li><p>可先從荷蘭國旗問題進行理解，以下為荷蘭國旗問題答案的代碼:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 荷蘭國旗問題</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NetherlandsFlag</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] partition(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> num) &#123;</span><br><span class="line">        <span class="keyword">int</span> less = l - <span class="number">1</span>; <span class="comment">//小於區域</span></span><br><span class="line">        <span class="keyword">int</span> more = r + <span class="number">1</span>; <span class="comment">//大於區域</span></span><br><span class="line">        <span class="keyword">int</span> cur = l; <span class="comment">//當前位置</span></span><br><span class="line">        <span class="keyword">while</span>(cur &lt; more) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[cur] &lt; num) &#123;</span><br><span class="line">                swap(arr, ++less, l++);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[cur] &gt; num) &#123;</span><br><span class="line">                swap(arr, --more, l);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;less + <span class="number">1</span>, more - <span class="number">1</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j]=  tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>時間複雜度 <strong>O($N*logN$)</strong></p>
+<p>空間複雜度 <strong>O($N$)</strong> (隨機快排的劃分點)</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        quickSort(arr, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l &lt; r) &#123;</span><br><span class="line">            swap(arr, l + (<span class="keyword">int</span>) (Math.random() * (r - l + <span class="number">1</span>)), r); <span class="comment">//加上這行為隨機快排</span></span><br><span class="line">            <span class="keyword">int</span>[] p = partition(arr, l, r);</span><br><span class="line">            quickSort(arr, l, p[<span class="number">0</span>] - <span class="number">1</span>);</span><br><span class="line">            quickSort(arr, p[<span class="number">1</span>] + <span class="number">1</span>, r);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] partition(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r) &#123;</span><br><span class="line">        <span class="keyword">int</span> less = l - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> more = r;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; more) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[l] &lt; arr[r]) &#123;</span><br><span class="line">                swap(arr, ++less, l++);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[l] &gt; arr[r]) &#123;</span><br><span class="line">                swap(arr, --more, l);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr, more, r);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;less + <span class="number">1</span>, more&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><ul>
+<li><p>先認識完全二叉數結構:</p>
+<p>左子節點下標: 當前節點 <strong>i * 2 + 1</strong></p>
+<p>右子節點下標: 當前節點 <strong>i * 2 + 2</strong></p>
+<p>父節點下標: <strong>(當前節點 i - 1) /2</strong></p>
+<p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/tree1.png?raw=true" alt="二叉數"></p>
+</li>
+<li><p>堆結構</p>
+<ul>
+<li>堆結構的 heapInsert 與 heapify</li>
+<li>堆結構的增大和減少</li>
+<li>如果只是建立堆的過程，時間複雜度為 <strong>O(N)</strong></li>
+<li>優先及隊列結構，就是堆結構</li>
+</ul>
+</li>
+<li><p>大根堆 -&gt; 完全二叉樹(任何一顆子樹的最大值都是頭部)</p>
+<p>小根堆 -&gt; 完全二叉樹(任何一顆子樹的最小值都是頭部)</p>
+</li>
+<li><p>時間複雜度: <strong>O($N * logN$)</strong></p>
+<p>空間複雜度: O(1)</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeapSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            heapInsert(arr, i); <span class="comment">//形成大根堆</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> heapSize = arr.length;</span><br><span class="line">        swap(arr, <span class="number">0</span>, --heapSize); <span class="comment">//最後一個位置的數和0位置交換</span></span><br><span class="line">        <span class="keyword">while</span> (heapSize &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            heapify(arr, <span class="number">0</span>, heapSize); <span class="comment">//調出大根堆</span></span><br><span class="line">            swap(arr, <span class="number">0</span>, --heapSize); <span class="comment">//繼續跟0位置上的數交換</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapInsert</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (arr[index] &gt; arr[(index - <span class="number">1</span>) / <span class="number">2</span>]) &#123; <span class="comment">//子節點比父位置大則交換</span></span><br><span class="line">            swap(arr, index, (index - <span class="number">1</span>) / <span class="number">2</span>);</span><br><span class="line">            index = (index - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapify</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> index, <span class="keyword">int</span> heapSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = index * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt; heapSize) &#123; <span class="comment">//確保子節點不越界</span></span><br><span class="line">            <span class="comment">//判斷兩個子節點中哪個值較大</span></span><br><span class="line">            <span class="keyword">int</span> largest = left + <span class="number">1</span> &lt; heapSize &amp;&amp; arr[left + <span class="number">1</span>] &gt; arr[left]</span><br><span class="line">                    ? left + <span class="number">1</span></span><br><span class="line">                    : left;</span><br><span class="line">            <span class="comment">//左右節點中的最大值和指定數(被改變的數)比較哪個比較大</span></span><br><span class="line">            largest = arr[largest] &gt; arr[index] ? largest : index;</span><br><span class="line">            <span class="comment">//如果最大值是指定數則不用進行交換</span></span><br><span class="line">            <span class="keyword">if</span> (largest == index) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            swap(arr, largest, index);<span class="comment">//largest != index</span></span><br><span class="line">            index = largest;</span><br><span class="line">            left = index * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">8</span>&#125;;</span><br><span class="line">        heapSort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
