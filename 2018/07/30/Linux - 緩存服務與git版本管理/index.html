@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="簡歷">
+		                簡歷
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="標簽">
+		                標簽
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/linux.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Linux - 緩存服務與git版本管理</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="緩存服務"><a href="#緩存服務" class="headerlink" title="緩存服務"></a>緩存服務</h1><h2 id="Memcached-基本操作"><a href="#Memcached-基本操作" class="headerlink" title="Memcached 基本操作"></a>Memcached 基本操作</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">解釋</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安裝</td>
+<td style="text-align:center">yum install memcached</td>
+</tr>
+<tr>
+<td style="text-align:center">啟動</td>
+<td style="text-align:center">memcached -d -l -m -p</td>
+</tr>
+<tr>
+<td style="text-align:center">停止</td>
+<td style="text-align:center">kill pid</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Redis-基本操作"><a href="#Redis-基本操作" class="headerlink" title="Redis 基本操作"></a>Redis 基本操作</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">解釋</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安裝</td>
+<td style="text-align:center">源碼編譯安裝</td>
+</tr>
+<tr>
+<td style="text-align:center">啟動</td>
+<td style="text-align:center">redis-server start/restart</td>
+</tr>
+<tr>
+<td style="text-align:center">停止</td>
+<td style="text-align:center">redis-server stop</td>
+</tr>
+<tr>
+<td style="text-align:center">客戶端</td>
+<td style="text-align:center">redis-client</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Redis-安裝"><a href="#Redis-安裝" class="headerlink" title="Redis 安裝"></a>Redis 安裝</h2><ul>
+<li><p>獲取源碼</p>
+<p><a href="http://download.redis.io/releases/redis-4.0.10.tar.gz" target="_blank" rel="noopener">http://download.redis.io/releases/redis-4.0.10.tar.gz</a></p>
+</li>
+<li><p>解壓</p>
+<p>tar xvfz redis-4.0.10.tar.gz</p>
+</li>
+<li><p>安裝</p>
+<p>yum install gcc</p>
+<p>make MALLOC=libc</p>
+<p>sudo make install</p>
+</li>
+<li><p>啟動</p>
+<p>cd src</p>
+<p>ls</p>
+</li>
+<li><p>|       命令       |                            簡介                             |<br>  | :————–: | :———————————————————: |<br>  |   redis-server   |                    Redis 服務端啟動程序                     |<br>  |    redis-cli     | Redis 客戶端操作工具，也可以用telnet 根據其純文本協議來操作 |<br>  | redis-benchmark  |                     Redis 性能測試工具                      |<br>  | redis-check-aof  |                        數據修復工具                         |<br>  | redis-check-dump |                        檢查導出工具                         |</p>
+<p>  啟動: ./redis-server</p>
+<p>  Redis 基本命令學習: <a href="http://www.runoob.com/redis/redis-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/redis/redis-tutorial.html</a></p>
+</li>
+</ul>
+<h2 id="Redis-拓展知識"><a href="#Redis-拓展知識" class="headerlink" title="Redis 拓展知識"></a>Redis 拓展知識</h2><ul>
+<li><p>Redis 不僅僅支持簡單的 k/v 類型的數據，同時還提供 list, set, hash 等數據結構的存儲</p>
+</li>
+<li><p>Redis 支持數據的備份，即 master-slave 模式的數據備份</p>
+</li>
+<li>Redis 支持數據的持久化，可以將內存中的數據保持再磁盤中，重啟的時候可以再次加載進行使用</li>
+</ul>
+<h1 id="Git-版本管理工具"><a href="#Git-版本管理工具" class="headerlink" title="Git 版本管理工具"></a>Git 版本管理工具</h1><h2 id="Git-安裝與生成-SSH-KEY"><a href="#Git-安裝與生成-SSH-KEY" class="headerlink" title="Git 安裝與生成 SSH KEY"></a>Git 安裝與生成 SSH KEY</h2><ul>
+<li><p>安裝</p>
+<p>sudo yum install git</p>
+</li>
+<li><p>生成 SSH KEY</p>
+<p>ssh-keygen</p>
+</li>
+<li><p>git 學習網址: <a href="https://git-scm.com/book/zh-tw/v2" target="_blank" rel="noopener">https://git-scm.com/book/zh-tw/v2</a></p>
+</li>
+</ul>
+<h2 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h2><ul>
+<li>git config: 讓你能夠取得和設定組態參數 </li>
+<li>git init: 初始化儲存庫</li>
+<li>git clone: 取得現有 git 倉儲的複本</li>
+<li>git remote: 了解目前已加進來的遠端版本控制倉庫 </li>
+<li>git fetch: 同步遠端伺服器上的資料到本地</li>
+<li>git commit: 提交版本</li>
+<li>git rebase: 重新定義分支的版本庫狀態</li>
+<li>git pull: 取回遠程主機某個分支的更新，再與本地的指定分支合併</li>
+<li>git push: 將本地分支的更新，推送到遠程主機</li>
+</ul>
+<h2 id="git-命令自動補全"><a href="#git-命令自動補全" class="headerlink" title="git 命令自動補全"></a>git 命令自動補全</h2><ul>
+<li><p>下載源碼，使用下載源碼中的 git-completion.bash 自動補全命令的文件</p>
+<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:git/git.git</p>
+</li>
+<li><p>複製 git-completion.bash 文件</p>
+<p>cp contrib/completion/git-completion.bash /etc/bash_completion.d/</p>
+</li>
+<li><p>加載 bash 腳本</p>
+<p>source /etc/bash_completion.d/git-completion.bash</p>
+</li>
+<li><p>自動加載腳本，編輯 ~/.bash_profile</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Git bash autoload</span><br><span class="line">if [-f /etc/bash_completion.d/git-completion.bash]; then source /etc/bash_completion.d/git-completion.bash</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

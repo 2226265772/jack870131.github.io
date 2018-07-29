@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="簡歷">
+		                簡歷
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="標簽">
+		                標簽
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/linux.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Linux - Java &amp; Python 運行環境配置</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="Java-運行環境配置"><a href="#Java-運行環境配置" class="headerlink" title="Java 運行環境配置"></a>Java 運行環境配置</h1><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><ul>
+<li>sudo yum -y install java-1.8.0-openjdk*</li>
+<li><strong>java -version</strong>: 查看 java 版本</li>
+</ul>
+<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><ul>
+<li>官網: <a href="http://tomcat.apache.org/" target="_blank" rel="noopener">http://tomcat.apache.org/</a></li>
+<li>Tomcat 9 下載地址: <a href="http://ftp.mirror.tw/pub/apache/tomcat/tomcat-9/v9.0.10/bin/apache-tomcat-9.0.10.tar.gz" target="_blank" rel="noopener">http://ftp.mirror.tw/pub/apache/tomcat/tomcat-9/v9.0.10/bin/apache-tomcat-9.0.10.tar.gz</a></li>
+<li><strong>sh startup.sh</strong>: 啟動 Tomcat</li>
+</ul>
+<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><ul>
+<li>官網: <a href="http://maven.apache.org/" target="_blank" rel="noopener">http://maven.apache.org/</a></li>
+<li><p>Maven 下載地址: <a href="http://ftp.tc.edu.tw/pub/Apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz" target="_blank" rel="noopener">http://ftp.tc.edu.tw/pub/Apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz</a></p>
+</li>
+<li><p><strong>mvn -v</strong>: 查看 maven 版本</p>
+</li>
+<li><strong>mvn clean package</strong>: 對文件進行打包</li>
+<li>maven 學習地址: <a href="https://www.w3cschool.cn/maven/" target="_blank" rel="noopener">https://www.w3cschool.cn/maven/</a></li>
+</ul>
+<h1 id="Python-運行環境配置"><a href="#Python-運行環境配置" class="headerlink" title="Python 運行環境配置"></a>Python 運行環境配置</h1><h2 id="安裝-Python"><a href="#安裝-Python" class="headerlink" title="安裝 Python"></a>安裝 Python</h2><ul>
+<li><p>下載 Python 安裝包<br>wget  <a href="https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz</a></p>
+<p>xz -d Python-3.6.1.tar.xz</p>
+<p>tar xvf Python-3.6.1.tar</p>
+</li>
+<li><p>安裝配置</p>
+<p>cd Python-3.6.1</p>
+<p>./configure (報錯則輸入 yum install make gcc gcc-c++)</p>
+</li>
+<li><p>編譯安裝</p>
+<p>make all</p>
+<p>make install (報錯則輸入 make &amp;&amp; make install)</p>
+</li>
+<li><p>驗證安裝</p>
+<p>python -v</p>
+<p>python3 -v</p>
+</li>
+<li><p>設置 python 3.x 為默認版本</p>
+<p>mv /usr/bin/python /usr/bin/python.bak</p>
+<p>ln -s /usr/local/bin/python3 /usr/bin/python</p>
+</li>
+<li><p>配置 yum (python 升級後，會發生 yum 命令無法使用的情形)</p>
+<ul>
+<li><p>vi /usr/bin/yum</p>
+<p>將第一行”#!/usr/bin/python” 改為 “#!/usr/bin/python2.7”</p>
+</li>
+<li><p>vi /usr/libexec/urlgrabber-ext-down</p>
+<p>同上</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="軟件包管理工具-pip"><a href="#軟件包管理工具-pip" class="headerlink" title="軟件包管理工具 pip"></a>軟件包管理工具 pip</h2><ul>
+<li><p>pip 安裝教程</p>
+<p><a href="https://www.liquidweb.com/kb/how-to-install-pip-on-centos-7/" target="_blank" rel="noopener">https://www.liquidweb.com/kb/how-to-install-pip-on-centos-7/</a></p>
+</li>
+<li><p>pip 換成豆瓣源</p>
+<p>mkdir ~/.pip</p>
+<p>vim ~/.pip/pip.conf</p>
+<p>輸入以下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">timeout=60</span><br><span class="line">index-url=https://pypi.doubanio.com/simple</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="python-虛擬環境安裝"><a href="#python-虛擬環境安裝" class="headerlink" title="python 虛擬環境安裝"></a>python 虛擬環境安裝</h2><p>pip install virtualenv</p>
+<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><p>virtualenv jack</p>
+<p>source jack/bin/activate</p>
+<h2 id="Flask"><a href="#Flask" class="headerlink" title="Flask"></a>Flask</h2><p>pip install -i <a href="https://pypi.doubanio.com/simple/" target="_blank" rel="noopener">https://pypi.doubanio.com/simple/</a>  - -trusted-host pypi.doubanio.com flask</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
