@@ -146,7 +146,7 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h2 id="自動遞增和遞減"><a href="#自動遞增和遞減" class="headerlink" title="自動遞增和遞減"></a>自動遞增和遞減</h2><ul>
+                <h1 id="自動遞增和遞減"><a href="#自動遞增和遞減" class="headerlink" title="自動遞增和遞減"></a>自動遞增和遞減</h1><ul>
 <li><p>自動遞增: ++</p>
 <p>自動遞減: - -</p>
 </li>
@@ -163,7 +163,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">pubilc <span class="class"><span class="keyword">class</span> <span class="title">AutoInc</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        print(<span class="string">"i : "</span> + i);</span><br><span class="line">        print(<span class="string">"++i : "</span> + ++i);</span><br><span class="line">        print(<span class="string">"i++ : "</span> + i++);</span><br><span class="line">        print(<span class="string">"i : "</span> + i);</span><br><span class="line">        print(<span class="string">"--i : "</span> + --i);</span><br><span class="line">        print(<span class="string">"i-- : "</span> + i--);</span><br><span class="line">        print(<span class="string">"i : "</span> + i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Output:</span></span><br><span class="line"><span class="comment">i : 1</span></span><br><span class="line"><span class="comment">++i : 2</span></span><br><span class="line"><span class="comment">i++ : 2</span></span><br><span class="line"><span class="comment">i : 3</span></span><br><span class="line"><span class="comment">--i : 2</span></span><br><span class="line"><span class="comment">i-- : 2</span></span><br><span class="line"><span class="comment">i : 1</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="對象的等價性"><a href="#對象的等價性" class="headerlink" title="對象的等價性"></a>對象的等價性</h2><ul>
+<h1 id="對象的等價性"><a href="#對象的等價性" class="headerlink" title="對象的等價性"></a>對象的等價性</h1><ul>
 <li><p>Example:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Equivalence</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Integer num1 = <span class="keyword">new</span> Integer(<span class="number">100</span>);</span><br><span class="line">        Integer num2 = <span class="keyword">new</span> Integer(<span class="number">100</span>);</span><br><span class="line">        System.out.println(n1 == n2);</span><br><span class="line">        System.out.println(n1 != n2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Output:</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -176,7 +176,7 @@
 <p>發生此狀況的原因為當要測試的類為<strong>自定義類</strong>時，要依照自定義類所提供的 equals 來決定如何比較。如果自定義類沒有覆蓋 Object 的 equals 類的話，則 equals() 的默認行為依舊是比較引用，與 “==” &amp; “!=” 的比較方式相同</p>
 </li>
 </ul>
-<h2 id="移位操作符"><a href="#移位操作符" class="headerlink" title="移位操作符"></a>移位操作符</h2><ul>
+<h1 id="移位操作符"><a href="#移位操作符" class="headerlink" title="移位操作符"></a>移位操作符</h1><ul>
 <li><p>移位操作符的運算對象是<strong>二進制的”位”</strong>，只可用來處理<strong>整數類型</strong>(基本類型的一種)</p>
 </li>
 <li><p>左移位操作符( &lt;&lt; )按照操作符右側指定的位數將操作符左邊的操作數向左移動(在低位補0)</p>

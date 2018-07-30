@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="簡歷">
+		                簡歷
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="標簽">
+		                標簽
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/java.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Thinking in Java - 學習筆記(三)</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="while-amp-do-while-的區別"><a href="#while-amp-do-while-的區別" class="headerlink" title="while &amp; do-while 的區別"></a>while &amp; do-while 的區別</h1><ul>
+<li>do-while 中的語句至少會執行一次，即便表達式第一次就被計算為 false</li>
+<li>while 循環中，如果條件第一次就為 false, 其中的語句便不會被執行，while 較 do-while 常用</li>
+</ul>
+<h1 id="return-break-continue"><a href="#return-break-continue" class="headerlink" title="return, break, continue"></a>return, break, continue</h1><h2 id="return"><a href="#return" class="headerlink" title="return"></a>return</h2><ul>
+<li>指定一個方法返回甚麼值(假設沒有 void 返回值)</li>
+<li>導致當前的方法退出，並返回指定值</li>
+<li>再返回 void 的方法中沒有顯式的 return 語句，但在該方法的結尾處有一個隱式的 return (可不必寫出)</li>
+</ul>
+<h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><ul>
+<li>強行退出循環</li>
+<li>不執行循環中剩餘的語句</li>
+</ul>
+<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><ul>
+<li>停止執行當前的迭代</li>
+<li>退回循環起始處，開始下一次迭代</li>
+</ul>
+<h2 id="規則"><a href="#規則" class="headerlink" title="規則"></a>規則</h2><ul>
+<li>一般 continue 會退回最內層循環的開頭(頂部)，並繼續執行</li>
+<li>帶標籤的 continue 會到達標籤的位置，隨後重新進入緊接在那個標籤後面的循環</li>
+<li>一般的 break 會中斷並跳出當前循環</li>
+<li>帶標籤的 break 會中斷並跳出標籤所指的循環</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">label;</span><br><span class="line">outer-iteration &#123;</span><br><span class="line">    inner-iteration &#123;</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">break</span>; <span class="comment">//(1)</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">continue</span>; <span class="comment">//(2)</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">continue</span> label; <span class="comment">//(3)</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">break</span>; <span class="comment">//(4)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>(1)</strong> <strong>break</strong> 中斷內部迭代，回到外部迭代</li>
+<li><strong>(2)</strong> <strong>continue</strong> 使執行點移回內部迭代的起始處</li>
+<li><strong>(3)</strong> <strong>continue label</strong> 同時中斷內部迭代以及外部迭代，直接轉到 label 處; 繼續迭代，但是是從外部迭代開始</li>
+<li><strong>(4)</strong> <strong>break label</strong> 中斷所有迭代，並回到 label 處，但並不重新迭代</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
