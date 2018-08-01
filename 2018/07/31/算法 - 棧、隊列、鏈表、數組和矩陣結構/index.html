@@ -63,7 +63,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -148,121 +148,121 @@
             <div class="typo" style="padding: 3rem;">
                 <h1 id="棧、隊列、鏈表、數組和矩陣結構"><a href="#棧、隊列、鏈表、數組和矩陣結構" class="headerlink" title="棧、隊列、鏈表、數組和矩陣結構"></a>棧、隊列、鏈表、數組和矩陣結構</h1><h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><ul>
 <li><p>用數組結構實現大小固定的隊列和棧</p>
-<pre><code class="java">  package pers.sort;
+<pre class=" language-java"><code class="language-java">  <span class="token keyword">package</span> pers<span class="token punctuation">.</span>sort<span class="token punctuation">;</span>
 
-  public class ArrayToStackQueue {
-      public static class ArrayStack {
-          private Integer[] arr;
-          private Integer index;
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayToStackQueue</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">ArrayStack</span> <span class="token punctuation">{</span>
+          <span class="token keyword">private</span> Integer<span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">;</span>
+          <span class="token keyword">private</span> Integer index<span class="token punctuation">;</span>
 
-          public ArrayStack(int initSize) {
-              if (initSize &gt; 0) {
-                  throw new IllegalArgumentException(&quot;The init size is less than 0&quot;);
-              }
-              arr = new Integer[initSize];
-              index = 0;
-          }
+          <span class="token keyword">public</span> <span class="token function">ArrayStack</span><span class="token punctuation">(</span><span class="token keyword">int</span> initSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>initSize <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"The init size is less than 0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">[</span>initSize<span class="token punctuation">]</span><span class="token punctuation">;</span>
+              index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          /**
+          <span class="token comment" spellcheck="true">/**
            * 返回棧頂
            *
            * @return
-           */
-          public Integer peek() {
-              if (index == 0) {
-                  return null;
-              }
-              return arr[index - 1];
-          }
+           */</span>
+          <span class="token keyword">public</span> Integer <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token keyword">return</span> arr<span class="token punctuation">[</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          /**
+          <span class="token comment" spellcheck="true">/**
            * 壓入元素
            *
            * @param obj
-           */
-          public void push(int obj) {
-              if (index == arr.length) {
-                  throw new ArrayIndexOutOfBoundsException(&quot;The queue is full&quot;);
-              }
-              arr[index++] = obj;
-          }
+           */</span>
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">int</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">==</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"The queue is full"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              arr<span class="token punctuation">[</span>index<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          /**
+          <span class="token comment" spellcheck="true">/**
            * 取出元素
            *
            * @return
-           */
-          public Integer pop() {
-              if (index == 0) {
-                  throw new ArrayIndexOutOfBoundsException(&quot;The queue is empty&quot;);
-              }
-              return arr[--index];
-          }
-      }
+           */</span>
+          <span class="token keyword">public</span> Integer <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"The queue is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token keyword">return</span> arr<span class="token punctuation">[</span><span class="token operator">--</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
 
-      public static class ArrayQueue {
-          private Integer[] arr;
-          private Integer size;
-          private Integer start;
-          private Integer end;
+      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">ArrayQueue</span> <span class="token punctuation">{</span>
+          <span class="token keyword">private</span> Integer<span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">;</span>
+          <span class="token keyword">private</span> Integer size<span class="token punctuation">;</span>
+          <span class="token keyword">private</span> Integer start<span class="token punctuation">;</span>
+          <span class="token keyword">private</span> Integer end<span class="token punctuation">;</span>
 
-          public ArrayQueue(int initSize) {
-              if (initSize &lt; 0) {
-                  throw new IllegalArgumentException(&quot;The init size is less than 0&quot;);
-              }
-              arr = new Integer[initSize];
-              size = 0;
-              start = 0;
-              end = 0;
-          }
+          <span class="token keyword">public</span> <span class="token function">ArrayQueue</span><span class="token punctuation">(</span><span class="token keyword">int</span> initSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>initSize <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"The init size is less than 0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">[</span>initSize<span class="token punctuation">]</span><span class="token punctuation">;</span>
+              size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+              start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+              end <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          /**
+          <span class="token comment" spellcheck="true">/**
            * 返回堆棧的頭位置
            * @return
-           */
-          public Integer peek() {
-              if (size == 0) {
-                  return null;
-              }
-              return arr[start];
-          }
+           */</span>
+          <span class="token keyword">public</span> Integer <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>size <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token keyword">return</span> arr<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          /**
+          <span class="token comment" spellcheck="true">/**
            *  壓入元素
            * @param obj
-           */
-          public void push(int obj) {
-              if (size == arr.length) {
-                  throw new ArrayIndexOutOfBoundsException(&quot;The queue is full&quot;);
-              }
-              size++;
-              arr[end] = obj;
-              /*
+           */</span>
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">int</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>size <span class="token operator">==</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"The queue is full"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              size<span class="token operator">++</span><span class="token punctuation">;</span>
+              arr<span class="token punctuation">[</span>end<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">;</span>
+              <span class="token comment" spellcheck="true">/*
                * 如果 end 已經在最後一個位置則回到0
                * 如果沒有到最後一個位置則往下走1格
-               */
-              end = end == arr.length - 1 ? 0 : end + 1;
-          }
+               */</span>
+              end <span class="token operator">=</span> end <span class="token operator">==</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> end <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          /**
+          <span class="token comment" spellcheck="true">/**
            * 取出元素
            * @return
-           */
-          public Integer poll() {
-              if (size == 0) {
-                  throw new ArrayIndexOutOfBoundsException(&quot;The queue is empty&quot;);
-              }
-              size--;
-              int temp = start;
-              /*
+           */</span>
+          <span class="token keyword">public</span> Integer <span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>size <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"The queue is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              size<span class="token operator">--</span><span class="token punctuation">;</span>
+              <span class="token keyword">int</span> temp <span class="token operator">=</span> start<span class="token punctuation">;</span>
+              <span class="token comment" spellcheck="true">/*
                * start 來到最後一個位置則回到0
                * 否則 start 往下走1格
-               */
-              start = start == arr.length - 1 ? 0 : start + 1;
-              return arr[temp];
-          }
-      }
-  }
+               */</span>
+              start <span class="token operator">=</span> start <span class="token operator">==</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> start <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span> arr<span class="token punctuation">[</span>temp<span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 </code></pre>
 </li>
 <li><p>實現一個特殊的棧，在實現棧的基本功能的基礎上，再實現返回棧中最小元素的操作</p>
@@ -271,168 +271,166 @@
 <li>pop、push、getMin 操作的時間複雜度都是 O(1)</li>
 <li>設計的棧類型可以使用現成的棧結構</li>
 </ol>
-</li>
-</ul>
-<pre><code class="java">package pers.sort;
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>sort<span class="token punctuation">;</span>
 
-import java.util.Stack;
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Stack<span class="token punctuation">;</span>
 
-public class NewStack {
-    public static class MyStack {
-        private Stack&lt;Integer&gt; stackData;
-        private Stack&lt;Integer&gt; stackMin;
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NewStack</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">MyStack</span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> Stack<span class="token operator">&lt;</span>Integer<span class="token operator">></span> stackData<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> Stack<span class="token operator">&lt;</span>Integer<span class="token operator">></span> stackMin<span class="token punctuation">;</span>
 
-        public MyStack() {
-            this.stackData = new Stack&lt;Integer&gt;();
-            this.stackMin = new Stack&lt;Integer&gt;();
-        }
+        <span class="token keyword">public</span> <span class="token function">MyStack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>stackData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token operator">&lt;</span>Integer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>stackMin <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token operator">&lt;</span>Integer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
 
-        public void push(int newNum) {
-            if (this.stackMin.isEmpty()) { //棧為空
-                this.stackMin.push(newNum);
-            } else if(newNum &lt; this.getmin()) { //新進元素比棧頂元素小
-                this.stackMin.push(newNum); //壓入當前數
-            } else { //新進元素重複壓入棧頂
-                int newMin = this.stackMin.peek();
-                this.stackMin.push(newMin);
-            }
-            this.stackData.push(newNum);
-        }
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">int</span> newNum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>stackMin<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//棧為空</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>stackMin<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>newNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>newNum <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//新進元素比棧頂元素小</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>stackMin<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>newNum<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//壓入當前數</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//新進元素重複壓入棧頂</span>
+                <span class="token keyword">int</span> newMin <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>stackMin<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>stackMin<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>newMin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>stackData<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>newNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-        /**
+        <span class="token comment" spellcheck="true">/**
          * 彈出最小元素
          * @return
-         */
-        public int pop() {
-            if (this.stackData.isEmpty()) {
-               throw new RuntimeException(&quot;Your stack is empty&quot;);
-            }
-            this.stackMin.pop();
-            return this.stackData.pop();
-        }
+         */</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>stackData<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Your stack is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>stackMin<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>stackData<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-        /**
+        <span class="token comment" spellcheck="true">/**
          * 返回棧頂得到最小元素
          * @return
-         */
-        public int getmin() {
-            if (this.stackMin.isEmpty()) {
-               throw new RuntimeException(&quot;Your stack is empty&quot;);
-            }
-            return this.stackMin.peek();
-        }
-    }
-}
+         */</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>stackMin<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Your stack is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>stackMin<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<ul>
+</li>
 <li><p>如何僅用隊列結構實現棧結構?</p>
 <p>  如何僅用棧結構實現隊列結構?</p>
-<pre><code class="java">  package pers.datastructure;
+<pre class=" language-java"><code class="language-java">  <span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
 
-  import java.util.LinkedList;
-  import java.util.Queue;
+  <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>LinkedList<span class="token punctuation">;</span>
+  <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Queue<span class="token punctuation">;</span>
 
-  public class QueueToStack {
-      public static class TwoQueuesStack {
-          private Queue&lt;Integer&gt; data;
-          private Queue&lt;Integer&gt; help;
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">QueueToStack</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">TwoQueuesStack</span> <span class="token punctuation">{</span>
+          <span class="token keyword">private</span> Queue<span class="token operator">&lt;</span>Integer<span class="token operator">></span> data<span class="token punctuation">;</span>
+          <span class="token keyword">private</span> Queue<span class="token operator">&lt;</span>Integer<span class="token operator">></span> help<span class="token punctuation">;</span>
 
-          public TwoQueuesStack() {
-              data = new LinkedList&lt;Integer&gt;();
-              help = new LinkedList&lt;Integer&gt;();
-          }
+          <span class="token keyword">public</span> <span class="token function">TwoQueuesStack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span>Integer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              help <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span>Integer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          public void push(int pushInt) {
-              data.add(pushInt);
-          }
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">int</span> pushInt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              data<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>pushInt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          public int peek() {
-              if (data.isEmpty()) {
-                  throw new RuntimeException(&quot;Stack is empty&quot;);
-              }
-              while (data.size() != 1) {
-                  help.add(data.poll());
-              }
-              int res = data.poll();
-              help.add(res);
-              swap();
-              return res;
-          }
+          <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stack is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token keyword">while</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  help<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token keyword">int</span> res <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              help<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token function">swap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          public int pop() {
-              if (data.isEmpty()) {
-                  throw new RuntimeException(&quot;Stack is empty&quot;);
-              }
-              while (data.size() &gt; 1) {
-                  help.add(data.poll()); //如果隊列不為空，則將所有數放入另一個隊列
-              }
-              int res = data.poll();
-              swap();
-              return res;
-          }
+          <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stack is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token keyword">while</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  help<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//如果隊列不為空，則將所有數放入另一個隊列</span>
+              <span class="token punctuation">}</span>
+              <span class="token keyword">int</span> res <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token function">swap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          /**
+          <span class="token comment" spellcheck="true">/**
            * 改變引用(兩隊列引用交換)
-           */
-          public void swap() {
-              Queue&lt;Integer&gt; temp = help;
-              help = data;
-              data = temp;
-          }
-      }
-  }
+           */</span>
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              Queue<span class="token operator">&lt;</span>Integer<span class="token operator">></span> temp <span class="token operator">=</span> help<span class="token punctuation">;</span>
+              help <span class="token operator">=</span> data<span class="token punctuation">;</span>
+              data <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 </code></pre>
 <hr>
-<pre><code class="java">  package pers.datastructure;
+<pre class=" language-java"><code class="language-java">  <span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
 
-  import java.net.Inet4Address;
-  import java.util.Stack;
+  <span class="token keyword">import</span> java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>Inet4Address<span class="token punctuation">;</span>
+  <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Stack<span class="token punctuation">;</span>
 
-  public class StackToQueue {
-      public static class TwoStackQueue {
-          private Stack&lt;Integer&gt; stackPush;
-          private Stack&lt;Integer&gt; stackPop;
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StackToQueue</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">TwoStackQueue</span> <span class="token punctuation">{</span>
+          <span class="token keyword">private</span> Stack<span class="token operator">&lt;</span>Integer<span class="token operator">></span> stackPush<span class="token punctuation">;</span>
+          <span class="token keyword">private</span> Stack<span class="token operator">&lt;</span>Integer<span class="token operator">></span> stackPop<span class="token punctuation">;</span>
 
-          public TwoStackQueue() {
-              this.stackPush = new Stack&lt;Integer&gt;();
-              this.stackPop = new Stack&lt;Integer&gt;();
-          }
+          <span class="token keyword">public</span> <span class="token function">TwoStackQueue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>stackPush <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token operator">&lt;</span>Integer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>stackPop <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token operator">&lt;</span>Integer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          public void push(int pushInt) {
-              stackPush.push(pushInt);
-              pour();
-          }
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">int</span> pushInt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              stackPush<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>pushInt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token function">pour</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          public int poll() {
-              if (stackPop.empty() &amp;&amp; stackPush.empty()) {
-                  throw new RuntimeException(&quot;Queue is empty&quot;);
-              }
-              pour(); //倒入元素
-              return stackPop.pop();
-          }
+          <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>stackPop<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> stackPush<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Queue is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token function">pour</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//倒入元素</span>
+              <span class="token keyword">return</span> stackPop<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          public int peek() {
-              if (stackPop.empty() &amp;&amp; stackPush.empty()) {
-                  throw new RuntimeException(&quot;Queue is empty&quot;);
-              }
-              pour();
-              return stackPop.peek();
-          }
+          <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>stackPop<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> stackPush<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Queue is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token function">pour</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span> stackPop<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
 
-          /**
+          <span class="token comment" spellcheck="true">/**
            * 倒入元素
-           */
-          public void pour() {
-              if (stackPop != null) {
-                  return;
-              }
+           */</span>
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">pour</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>stackPop <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">return</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
 
-              while (stackPush.isEmpty()) {
-                  stackPop.push(stackPush.pop());
-              }
-          }
-      }
-  }
+              <span class="token keyword">while</span> <span class="token punctuation">(</span>stackPush<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  stackPop<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>stackPush<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 </code></pre>
 </li>
 </ul>

@@ -63,7 +63,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -160,19 +160,19 @@
 <p>後綴遞增和後綴遞減: 先生成值，再執行運算</p>
 </li>
 <li><p>事例:</p>
-<pre><code class="java">pubilc class AutoInc {
-    public static void main(String[] args) {
-        int i = 1;
-        print(&quot;i : &quot; + i);
-        print(&quot;++i : &quot; + ++i);
-        print(&quot;i++ : &quot; + i++);
-        print(&quot;i : &quot; + i);
-        print(&quot;--i : &quot; + --i);
-        print(&quot;i-- : &quot; + i--);
-        print(&quot;i : &quot; + i);
-    }
-}
-/* Output:
+<pre class=" language-java"><code class="language-java">pubilc <span class="token keyword">class</span> <span class="token class-name">AutoInc</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"i : "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"++i : "</span> <span class="token operator">+</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"i++ : "</span> <span class="token operator">+</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"i : "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"--i : "</span> <span class="token operator">+</span> <span class="token operator">--</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"i-- : "</span> <span class="token operator">+</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"i : "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* Output:
 i : 1
 ++i : 2
 i++ : 2
@@ -180,24 +180,24 @@ i : 3
 --i : 2
 i-- : 2
 i : 1
-*/
+*/</span>
 </code></pre>
 </li>
 </ul>
 <h1 id="對象的等價性"><a href="#對象的等價性" class="headerlink" title="對象的等價性"></a>對象的等價性</h1><ul>
 <li><p>Example:</p>
-<pre><code class="java">public class Equivalence {
-    public static void main(String[] args) {
-        Integer num1 = new Integer(100);
-        Integer num2 = new Integer(100);
-        System.out.println(n1 == n2);
-        System.out.println(n1 != n2);
-    }
-}
-/* Output:
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Equivalence</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Integer num1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Integer num2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>n1 <span class="token operator">==</span> n2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>n1 <span class="token operator">!=</span> n2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* Output:
 false
 true
-*/
+*/</span>
 </code></pre>
 </li>
 <li><p>引起此現象的原因為儘管對象的內容相同，對象的<strong>引用</strong>卻不同，== &amp; != 比較的為<strong>對象的引用</strong></p>
@@ -205,21 +205,21 @@ true
 <li><p>如果想比較兩對象內容是否相同，可使用 equals(), 但這個方法不適用於”基本類型” (byte, short, int, long 等等)，基本類型使用 == &amp; != 即可</p>
 </li>
 <li><p>但凡事都有例外，當創建自己的類時，會發生以下狀況:</p>
-<pre><code class="java">class Number {
-    int i;
-}
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Number</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-public class EqualsMethod {
-    public static void main(String[] args) {
-        Number n1 = new Number();
-        Number n2 = new Number();
-        n1.i = n2.i = 40;
-        System.out.println(n1.equals(n2));
-    }
-}
-/* Output:
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EqualsMethod</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Number n1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Number n2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        n1<span class="token punctuation">.</span>i <span class="token operator">=</span> n2<span class="token punctuation">.</span>i <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>n1<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>n2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* Output:
 false
-*/
+*/</span>
 </code></pre>
 <p>發生此狀況的原因為當要測試的類為<strong>自定義類</strong>時，要依照自定義類所提供的 equals 來決定如何比較。如果自定義類沒有覆蓋 Object 的 equals 類的話，則 equals() 的默認行為依舊是比較引用，與 “==” &amp; “!=” 的比較方式相同</p>
 </li>
@@ -234,23 +234,23 @@ false
 <li><p>“移位”可與”等號”( &lt;&lt;= 或 &gt;&gt;= 或 &gt;&gt;&gt;=) 組合使用。操作符左邊的值會移動由右邊的值指定的數，再將得到的結果給左邊的變量</p>
 </li>
 </ul>
-<pre><code class="java">package pers.jack.other;
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>other<span class="token punctuation">;</span>
 
-public class BitwiseOperator {
-    public static void main(String[] args) {
-        int x = 10;
-        System.out.println(Integer.toBinaryString(x));
-        System.out.println(x &gt;&gt; 1);
-        System.out.println(Integer.toBinaryString(x &gt;&gt; 1));
-        System.out.println(x / 2);
-        System.out.println();
-        System.out.println(Integer.toBinaryString(x));
-        System.out.println(x &lt;&lt; 1);
-        System.out.println(Integer.toBinaryString(x &lt;&lt; 1));
-        System.out.println(x * 2);
-    }
-}
-/*
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BitwiseOperator</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Integer<span class="token punctuation">.</span><span class="token function">toBinaryString</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Integer<span class="token punctuation">.</span><span class="token function">toBinaryString</span><span class="token punctuation">(</span>x <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Integer<span class="token punctuation">.</span><span class="token function">toBinaryString</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Integer<span class="token punctuation">.</span><span class="token function">toBinaryString</span><span class="token punctuation">(</span>x <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*
 1010
 5
 101
@@ -260,7 +260,7 @@ public class BitwiseOperator {
 20
 10100
 20
-*/
+*/</span>
 </code></pre>
 
             </div>

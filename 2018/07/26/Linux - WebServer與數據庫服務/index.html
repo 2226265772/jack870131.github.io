@@ -63,7 +63,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -247,16 +247,16 @@
 <p>sudo service firewalld stop</p>
 </li>
 <li><p>MySQL 開啟 general_log 跟蹤數據執行</p>
-<pre><code class="mysql"># 設置 general log 保存路徑
+<pre class=" language-mysql"><code class="language-mysql"># 設置 general log 保存路徑
 # 注意在 Linux 中只能設置道 /tmp 或 /var 文件夾下，設置其他路徑出錯
 # 需要 root 用戶才有訪問此文件的權限
-mysql&gt; set global general_log file=&#39;/tmp/general.log&#39;;
+mysql> set global general_log file='/tmp/general.log';
 
 # 開啟 general log 模式
-mysql&gt; set global general_log=on;
+mysql> set global general_log=on;
 
 # 關閉 general log 模式
-mysql&gt; set global general_log=off;
+mysql> set global general_log=off;
 </code></pre>
 <p>在 general log 模式開啟過程中，所有對數據庫的操作都將被記錄在 general.log 文件</p>
 </li>

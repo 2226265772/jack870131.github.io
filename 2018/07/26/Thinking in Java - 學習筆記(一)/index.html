@@ -63,7 +63,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -193,14 +193,14 @@
 </li>
 <li>以下代碼 t1 &amp; t2 對象共享同一個 i, t1.i 和 t2.i 指向同一存儲空間，因此他們具有相同的值50</li>
 </ul>
-<pre><code class="java">public class StaticTest {
-    public static int i = 50;
-}
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StaticTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-public static void main(String[] args) {
-    StaticTest t1 = new StaticTest();
-    StaticTest t2 = new StaticTest();
-}
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    StaticTest t1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StaticTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    StaticTest t2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StaticTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <ul>
 <li>靜態方法既可以像其他方法一樣，通過一個對象來飲用某個靜態方法，也可以通過 ClassName.method() 的形式加以引用</li>
@@ -209,13 +209,13 @@ public static void main(String[] args) {
 </ul>
 <h1 id="常用標籤"><a href="#常用標籤" class="headerlink" title="常用標籤"></a>常用標籤</h1><ul>
 <li><p><strong>@see</strong>: 引用其他類。此標籤允許用戶引用其他類的文檔，javadoc 會通過此標籤鏈接到其他文檔並加入一個具有超鏈接的“See Also” (參見) 的條目。格式如下:</p>
-<pre><code class="java">@see classname
-@see fully-qualified-classname
-@see fully-qualified-classname#method-name
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@see</span> classname
+<span class="token annotation punctuation">@see</span> fully<span class="token operator">-</span>qualified<span class="token operator">-</span>classname
+<span class="token annotation punctuation">@see</span> fully<span class="token operator">-</span>qualified<span class="token operator">-</span>classname#method<span class="token operator">-</span>name
 </code></pre>
 </li>
 <li><p><strong>@version</strong>: 包含在版本說明中的重要信息。格式如下:</p>
-<pre><code class="java">@version version-information (4.0)
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@version</span> version<span class="token operator">-</span><span class="token function">information</span> <span class="token punctuation">(</span><span class="token number">4.0</span><span class="token punctuation">)</span>
 </code></pre>
 </li>
 <li><p><strong>@param</strong>: 該標籤用於方法文檔中，”parameter-name” 是方法的參數列表中的標示符。格式如下:</p>
