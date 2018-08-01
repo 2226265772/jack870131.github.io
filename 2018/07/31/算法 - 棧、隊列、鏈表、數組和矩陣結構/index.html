@@ -71,7 +71,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -269,61 +269,62 @@
 <p>  <strong>要求</strong></p>
 <ol>
 <li>pop、push、getMin 操作的時間複雜度都是 O(1)</li>
-<li><p>設計的棧類型可以使用現成的棧結構</p>
+<li>設計的棧類型可以使用現成的棧結構</li>
+</ol>
+</li>
+</ul>
 <pre><code class="java">package pers.sort;
 
 import java.util.Stack;
 
 public class NewStack {
- public static class MyStack {
-     private Stack&lt;Integer&gt; stackData;
-     private Stack&lt;Integer&gt; stackMin;
+    public static class MyStack {
+        private Stack&lt;Integer&gt; stackData;
+        private Stack&lt;Integer&gt; stackMin;
 
-     public MyStack() {
-         this.stackData = new Stack&lt;Integer&gt;();
-         this.stackMin = new Stack&lt;Integer&gt;();
-     }
+        public MyStack() {
+            this.stackData = new Stack&lt;Integer&gt;();
+            this.stackMin = new Stack&lt;Integer&gt;();
+        }
 
-     public void push(int newNum) {
-         if (this.stackMin.isEmpty()) { //棧為空
-             this.stackMin.push(newNum);
-         } else if(newNum &lt; this.getmin()) { //新進元素比棧頂元素小
-             this.stackMin.push(newNum); //壓入當前數
-         } else { //新進元素重複壓入棧頂
-             int newMin = this.stackMin.peek();
-             this.stackMin.push(newMin);
-         }
-         this.stackData.push(newNum);
-     }
+        public void push(int newNum) {
+            if (this.stackMin.isEmpty()) { //棧為空
+                this.stackMin.push(newNum);
+            } else if(newNum &lt; this.getmin()) { //新進元素比棧頂元素小
+                this.stackMin.push(newNum); //壓入當前數
+            } else { //新進元素重複壓入棧頂
+                int newMin = this.stackMin.peek();
+                this.stackMin.push(newMin);
+            }
+            this.stackData.push(newNum);
+        }
 
-     /**
-      * 彈出最小元素
-      * @return
-      */
-     public int pop() {
-         if (this.stackData.isEmpty()) {
-             throw new RuntimeException(&quot;Your stack is empty&quot;);
-         }
-         this.stackMin.pop();
-         return this.stackData.pop();
-     }
+        /**
+         * 彈出最小元素
+         * @return
+         */
+        public int pop() {
+            if (this.stackData.isEmpty()) {
+               throw new RuntimeException(&quot;Your stack is empty&quot;);
+            }
+            this.stackMin.pop();
+            return this.stackData.pop();
+        }
 
-     /**
-      * 返回棧頂得到最小元素
-      * @return
-      */
-     public int getmin() {
-         if (this.stackMin.isEmpty()) {
-             throw new RuntimeException(&quot;Your stack is empty&quot;);
-         }
-         return this.stackMin.peek();
-     }
- }
+        /**
+         * 返回棧頂得到最小元素
+         * @return
+         */
+        public int getmin() {
+            if (this.stackMin.isEmpty()) {
+               throw new RuntimeException(&quot;Your stack is empty&quot;);
+            }
+            return this.stackMin.peek();
+        }
+    }
 }
 </code></pre>
-</li>
-</ol>
-</li>
+<ul>
 <li><p>如何僅用隊列結構實現棧結構?</p>
 <p>  如何僅用棧結構實現隊列結構?</p>
 <pre><code class="java">  package pers.datastructure;
