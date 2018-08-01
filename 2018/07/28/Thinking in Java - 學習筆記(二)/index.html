@@ -160,19 +160,67 @@
 <p>後綴遞增和後綴遞減: 先生成值，再執行運算</p>
 </li>
 <li><p>事例:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">pubilc <span class="class"><span class="keyword">class</span> <span class="title">AutoInc</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        print(<span class="string">"i : "</span> + i);</span><br><span class="line">        print(<span class="string">"++i : "</span> + ++i);</span><br><span class="line">        print(<span class="string">"i++ : "</span> + i++);</span><br><span class="line">        print(<span class="string">"i : "</span> + i);</span><br><span class="line">        print(<span class="string">"--i : "</span> + --i);</span><br><span class="line">        print(<span class="string">"i-- : "</span> + i--);</span><br><span class="line">        print(<span class="string">"i : "</span> + i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Output:</span></span><br><span class="line"><span class="comment">i : 1</span></span><br><span class="line"><span class="comment">++i : 2</span></span><br><span class="line"><span class="comment">i++ : 2</span></span><br><span class="line"><span class="comment">i : 3</span></span><br><span class="line"><span class="comment">--i : 2</span></span><br><span class="line"><span class="comment">i-- : 2</span></span><br><span class="line"><span class="comment">i : 1</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<pre><code class="java">pubilc class AutoInc {
+    public static void main(String[] args) {
+        int i = 1;
+        print(&quot;i : &quot; + i);
+        print(&quot;++i : &quot; + ++i);
+        print(&quot;i++ : &quot; + i++);
+        print(&quot;i : &quot; + i);
+        print(&quot;--i : &quot; + --i);
+        print(&quot;i-- : &quot; + i--);
+        print(&quot;i : &quot; + i);
+    }
+}
+/* Output:
+i : 1
+++i : 2
+i++ : 2
+i : 3
+--i : 2
+i-- : 2
+i : 1
+*/
+</code></pre>
 </li>
 </ul>
 <h1 id="對象的等價性"><a href="#對象的等價性" class="headerlink" title="對象的等價性"></a>對象的等價性</h1><ul>
 <li><p>Example:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Equivalence</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Integer num1 = <span class="keyword">new</span> Integer(<span class="number">100</span>);</span><br><span class="line">        Integer num2 = <span class="keyword">new</span> Integer(<span class="number">100</span>);</span><br><span class="line">        System.out.println(n1 == n2);</span><br><span class="line">        System.out.println(n1 != n2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Output:</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<pre><code class="java">public class Equivalence {
+    public static void main(String[] args) {
+        Integer num1 = new Integer(100);
+        Integer num2 = new Integer(100);
+        System.out.println(n1 == n2);
+        System.out.println(n1 != n2);
+    }
+}
+/* Output:
+false
+true
+*/
+</code></pre>
 </li>
 <li><p>引起此現象的原因為儘管對象的內容相同，對象的<strong>引用</strong>卻不同，== &amp; != 比較的為<strong>對象的引用</strong></p>
 </li>
 <li><p>如果想比較兩對象內容是否相同，可使用 equals(), 但這個方法不適用於”基本類型” (byte, short, int, long 等等)，基本類型使用 == &amp; != 即可</p>
 </li>
 <li><p>但凡事都有例外，當創建自己的類時，會發生以下狀況:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Number</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EqualsMethod</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Number n1 = <span class="keyword">new</span> Number();</span><br><span class="line">        Number n2 = <span class="keyword">new</span> Number();</span><br><span class="line">        n1.i = n2.i = <span class="number">40</span>;</span><br><span class="line">        System.out.println(n1.equals(n2));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Output:</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<pre><code class="java">class Number {
+    int i;
+}
+
+public class EqualsMethod {
+    public static void main(String[] args) {
+        Number n1 = new Number();
+        Number n2 = new Number();
+        n1.i = n2.i = 40;
+        System.out.println(n1.equals(n2));
+    }
+}
+/* Output:
+false
+*/
+</code></pre>
 <p>發生此狀況的原因為當要測試的類為<strong>自定義類</strong>時，要依照自定義類所提供的 equals 來決定如何比較。如果自定義類沒有覆蓋 Object 的 equals 類的話，則 equals() 的默認行為依舊是比較引用，與 “==” &amp; “!=” 的比較方式相同</p>
 </li>
 </ul>
@@ -186,7 +234,34 @@
 <li><p>“移位”可與”等號”( &lt;&lt;= 或 &gt;&gt;= 或 &gt;&gt;&gt;=) 組合使用。操作符左邊的值會移動由右邊的值指定的數，再將得到的結果給左邊的變量</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.jack.other;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BitwiseOperator</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line">        System.out.println(Integer.toBinaryString(x));</span><br><span class="line">        System.out.println(x &gt;&gt; <span class="number">1</span>);</span><br><span class="line">        System.out.println(Integer.toBinaryString(x &gt;&gt; <span class="number">1</span>));</span><br><span class="line">        System.out.println(x / <span class="number">2</span>);</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(Integer.toBinaryString(x));</span><br><span class="line">        System.out.println(x &lt;&lt; <span class="number">1</span>);</span><br><span class="line">        System.out.println(Integer.toBinaryString(x &lt;&lt; <span class="number">1</span>));</span><br><span class="line">        System.out.println(x * <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">1010</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">101</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">1010</span></span><br><span class="line"><span class="comment">20</span></span><br><span class="line"><span class="comment">10100</span></span><br><span class="line"><span class="comment">20</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.jack.other;
+
+public class BitwiseOperator {
+    public static void main(String[] args) {
+        int x = 10;
+        System.out.println(Integer.toBinaryString(x));
+        System.out.println(x &gt;&gt; 1);
+        System.out.println(Integer.toBinaryString(x &gt;&gt; 1));
+        System.out.println(x / 2);
+        System.out.println();
+        System.out.println(Integer.toBinaryString(x));
+        System.out.println(x &lt;&lt; 1);
+        System.out.println(Integer.toBinaryString(x &lt;&lt; 1));
+        System.out.println(x * 2);
+    }
+}
+/*
+1010
+5
+101
+5
+
+1010
+20
+10100
+20
+*/
+</code></pre>
 
             </div>
 

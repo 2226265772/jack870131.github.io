@@ -254,8 +254,10 @@
 <p>source /etc/bash_completion.d/git-completion.bash</p>
 </li>
 <li><p>自動加載腳本，編輯 ~/.bash_profile</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Git bash autoload</span><br><span class="line">if [-f /etc/bash_completion.d/git-completion.bash]; then source /etc/bash_completion.d/git-completion.bash</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-</li>
+<pre><code># Git bash autoload
+if [-f /etc/bash_completion.d/git-completion.bash]; then source /etc/bash_completion.d/git-completion.bash
+fi
+</code></pre></li>
 </ul>
 
             </div>

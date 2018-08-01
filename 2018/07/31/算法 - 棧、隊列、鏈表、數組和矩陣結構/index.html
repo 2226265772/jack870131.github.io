@@ -142,20 +142,185 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/algorithm.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >算法 - 棧、隊列、鏈表、數組和矩陣結構</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >算法 - 棧、隊列、鏈表、數組和矩陣</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <h1 id="棧、隊列、鏈表、數組和矩陣結構"><a href="#棧、隊列、鏈表、數組和矩陣結構" class="headerlink" title="棧、隊列、鏈表、數組和矩陣結構"></a>棧、隊列、鏈表、數組和矩陣結構</h1><h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><ul>
 <li><p>用數組結構實現大小固定的隊列和棧</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayToStackQueue</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayStack</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Integer[] arr;</span><br><span class="line">        <span class="keyword">private</span> Integer index;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ArrayStack</span><span class="params">(<span class="keyword">int</span> initSize)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (initSize &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"The init size is less than 0"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            arr = <span class="keyword">new</span> Integer[initSize];</span><br><span class="line">            index = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 返回棧頂</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Integer <span class="title">peek</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (index == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> arr[index - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 壓入元素</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param</span> obj</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> obj)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (index == arr.length) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArrayIndexOutOfBoundsException(<span class="string">"The queue is full"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            arr[index++] = obj;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 取出元素</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Integer <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (index == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArrayIndexOutOfBoundsException(<span class="string">"The queue is empty"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> arr[--index];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayQueue</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Integer[] arr;</span><br><span class="line">        <span class="keyword">private</span> Integer size;</span><br><span class="line">        <span class="keyword">private</span> Integer start;</span><br><span class="line">        <span class="keyword">private</span> Integer end;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ArrayQueue</span><span class="params">(<span class="keyword">int</span> initSize)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (initSize &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"The init size is less than 0"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            arr = <span class="keyword">new</span> Integer[initSize];</span><br><span class="line">            size = <span class="number">0</span>;</span><br><span class="line">            start = <span class="number">0</span>;</span><br><span class="line">            end = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 返回堆棧的頭位置</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Integer <span class="title">peek</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (size == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> arr[start];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         *  壓入元素</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param</span> obj</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> obj)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (size == arr.length) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArrayIndexOutOfBoundsException(<span class="string">"The queue is full"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            size++;</span><br><span class="line">            arr[end] = obj;</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * 如果 end 已經在最後一個位置則回到0</span></span><br><span class="line"><span class="comment">             * 如果沒有到最後一個位置則往下走1格</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            end = end == arr.length - <span class="number">1</span> ? <span class="number">0</span> : end + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 取出元素</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Integer <span class="title">poll</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (size == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArrayIndexOutOfBoundsException(<span class="string">"The queue is empty"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            size--;</span><br><span class="line">            <span class="keyword">int</span> temp = start;</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * start 來到最後一個位置則回到0</span></span><br><span class="line"><span class="comment">             * 否則 start 往下走1格</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            start = start == arr.length - <span class="number">1</span> ? <span class="number">0</span> : start + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">return</span> arr[temp];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">  package pers.sort;
+
+  public class ArrayToStackQueue {
+      public static class ArrayStack {
+          private Integer[] arr;
+          private Integer index;
+
+          public ArrayStack(int initSize) {
+              if (initSize &gt; 0) {
+                  throw new IllegalArgumentException(&quot;The init size is less than 0&quot;);
+              }
+              arr = new Integer[initSize];
+              index = 0;
+          }
+
+          /**
+           * 返回棧頂
+           *
+           * @return
+           */
+          public Integer peek() {
+              if (index == 0) {
+                  return null;
+              }
+              return arr[index - 1];
+          }
+
+          /**
+           * 壓入元素
+           *
+           * @param obj
+           */
+          public void push(int obj) {
+              if (index == arr.length) {
+                  throw new ArrayIndexOutOfBoundsException(&quot;The queue is full&quot;);
+              }
+              arr[index++] = obj;
+          }
+
+          /**
+           * 取出元素
+           *
+           * @return
+           */
+          public Integer pop() {
+              if (index == 0) {
+                  throw new ArrayIndexOutOfBoundsException(&quot;The queue is empty&quot;);
+              }
+              return arr[--index];
+          }
+      }
+
+      public static class ArrayQueue {
+          private Integer[] arr;
+          private Integer size;
+          private Integer start;
+          private Integer end;
+
+          public ArrayQueue(int initSize) {
+              if (initSize &lt; 0) {
+                  throw new IllegalArgumentException(&quot;The init size is less than 0&quot;);
+              }
+              arr = new Integer[initSize];
+              size = 0;
+              start = 0;
+              end = 0;
+          }
+
+          /**
+           * 返回堆棧的頭位置
+           * @return
+           */
+          public Integer peek() {
+              if (size == 0) {
+                  return null;
+              }
+              return arr[start];
+          }
+
+          /**
+           *  壓入元素
+           * @param obj
+           */
+          public void push(int obj) {
+              if (size == arr.length) {
+                  throw new ArrayIndexOutOfBoundsException(&quot;The queue is full&quot;);
+              }
+              size++;
+              arr[end] = obj;
+              /*
+               * 如果 end 已經在最後一個位置則回到0
+               * 如果沒有到最後一個位置則往下走1格
+               */
+              end = end == arr.length - 1 ? 0 : end + 1;
+          }
+
+          /**
+           * 取出元素
+           * @return
+           */
+          public Integer poll() {
+              if (size == 0) {
+                  throw new ArrayIndexOutOfBoundsException(&quot;The queue is empty&quot;);
+              }
+              size--;
+              int temp = start;
+              /*
+               * start 來到最後一個位置則回到0
+               * 否則 start 往下走1格
+               */
+              start = start == arr.length - 1 ? 0 : start + 1;
+              return arr[temp];
+          }
+      }
+  }
+</code></pre>
 </li>
 <li><p>實現一個特殊的棧，在實現棧的基本功能的基礎上，再實現返回棧中最小元素的操作</p>
 <p>  <strong>要求</strong></p>
 <ol>
 <li>pop、push、getMin 操作的時間複雜度都是 O(1)</li>
 <li><p>設計的棧類型可以使用現成的棧結構</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NewStack</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyStack</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Stack&lt;Integer&gt; stackData;</span><br><span class="line">        <span class="keyword">private</span> Stack&lt;Integer&gt; stackMin;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MyStack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.stackData = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">            <span class="keyword">this</span>.stackMin = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> newNum)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.stackMin.isEmpty()) &#123; <span class="comment">//棧為空</span></span><br><span class="line">                <span class="keyword">this</span>.stackMin.push(newNum);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(newNum &lt; <span class="keyword">this</span>.getmin()) &#123; <span class="comment">//新進元素比棧頂元素小</span></span><br><span class="line">                <span class="keyword">this</span>.stackMin.push(newNum); <span class="comment">//壓入當前數</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">//新進元素重複壓入棧頂</span></span><br><span class="line">                <span class="keyword">int</span> newMin = <span class="keyword">this</span>.stackMin.peek();</span><br><span class="line">                <span class="keyword">this</span>.stackMin.push(newMin);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">this</span>.stackData.push(newNum);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 彈出最小元素</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.stackData.isEmpty()) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"Your stack is empty"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">this</span>.stackMin.pop();</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.stackData.pop();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 返回棧頂得到最小元素</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.stackMin.isEmpty()) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"Your stack is empty"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.stackMin.peek();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+import java.util.Stack;
+
+public class NewStack {
+ public static class MyStack {
+     private Stack&lt;Integer&gt; stackData;
+     private Stack&lt;Integer&gt; stackMin;
+
+     public MyStack() {
+         this.stackData = new Stack&lt;Integer&gt;();
+         this.stackMin = new Stack&lt;Integer&gt;();
+     }
+
+     public void push(int newNum) {
+         if (this.stackMin.isEmpty()) { //棧為空
+             this.stackMin.push(newNum);
+         } else if(newNum &lt; this.getmin()) { //新進元素比棧頂元素小
+             this.stackMin.push(newNum); //壓入當前數
+         } else { //新進元素重複壓入棧頂
+             int newMin = this.stackMin.peek();
+             this.stackMin.push(newMin);
+         }
+         this.stackData.push(newNum);
+     }
+
+     /**
+      * 彈出最小元素
+      * @return
+      */
+     public int pop() {
+         if (this.stackData.isEmpty()) {
+             throw new RuntimeException(&quot;Your stack is empty&quot;);
+         }
+         this.stackMin.pop();
+         return this.stackData.pop();
+     }
+
+     /**
+      * 返回棧頂得到最小元素
+      * @return
+      */
+     public int getmin() {
+         if (this.stackMin.isEmpty()) {
+             throw new RuntimeException(&quot;Your stack is empty&quot;);
+         }
+         return this.stackMin.peek();
+     }
+ }
+}
+</code></pre>
 </li>
 </ol>
 </li>

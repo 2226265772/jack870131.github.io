@@ -193,7 +193,15 @@
 </li>
 <li>以下代碼 t1 &amp; t2 對象共享同一個 i, t1.i 和 t2.i 指向同一存儲空間，因此他們具有相同的值50</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticTest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> i = <span class="number">50</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    StaticTest t1 = <span class="keyword">new</span> StaticTest();</span><br><span class="line">    StaticTest t2 = <span class="keyword">new</span> StaticTest();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">public class StaticTest {
+    public static int i = 50;
+}
+
+public static void main(String[] args) {
+    StaticTest t1 = new StaticTest();
+    StaticTest t2 = new StaticTest();
+}
+</code></pre>
 <ul>
 <li>靜態方法既可以像其他方法一樣，通過一個對象來飲用某個靜態方法，也可以通過 ClassName.method() 的形式加以引用</li>
 <li>static 方法最重要的就是可以在不創建任何對象的前提下調用他</li>
@@ -201,17 +209,21 @@
 </ul>
 <h1 id="常用標籤"><a href="#常用標籤" class="headerlink" title="常用標籤"></a>常用標籤</h1><ul>
 <li><p><strong>@see</strong>: 引用其他類。此標籤允許用戶引用其他類的文檔，javadoc 會通過此標籤鏈接到其他文檔並加入一個具有超鏈接的“See Also” (參見) 的條目。格式如下:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@see</span> classname</span><br><span class="line"><span class="meta">@see</span> fully-qualified-classname</span><br><span class="line">@see fully-qualified-classname#method-name</span><br></pre></td></tr></table></figure>
+<pre><code class="java">@see classname
+@see fully-qualified-classname
+@see fully-qualified-classname#method-name
+</code></pre>
 </li>
 <li><p><strong>@version</strong>: 包含在版本說明中的重要信息。格式如下:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@version</span> version-information (<span class="number">4.0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="java">@version version-information (4.0)
+</code></pre>
 </li>
 <li><p><strong>@param</strong>: 該標籤用於方法文檔中，”parameter-name” 是方法的參數列表中的標示符。格式如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@param parameter-name description</span><br></pre></td></tr></table></figure>
-</li>
+<pre><code>@param parameter-name description
+</code></pre></li>
 <li><p><strong>@return</strong>: 該標籤用於方法文檔，”description” 用來描述返回值的含義。格式如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@return description</span><br></pre></td></tr></table></figure>
-</li>
+<pre><code>@return description
+</code></pre></li>
 <li><p><strong>@author</strong>: 作者的姓名或是帳號之類的訊息</p>
 </li>
 <li><p><strong>@throws</strong>: 由於某個方法調用失敗而拋出的異常對象</p>

@@ -247,7 +247,17 @@
 <p>sudo service firewalld stop</p>
 </li>
 <li><p>MySQL 開啟 general_log 跟蹤數據執行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 設置 general log 保存路徑</span><br><span class="line"># 注意在 Linux 中只能設置道 /tmp 或 /var 文件夾下，設置其他路徑出錯</span><br><span class="line"># 需要 root 用戶才有訪問此文件的權限</span><br><span class="line">mysql&gt; set global general_log file=&apos;/tmp/general.log&apos;;</span><br><span class="line"></span><br><span class="line"># 開啟 general log 模式</span><br><span class="line">mysql&gt; set global general_log=on;</span><br><span class="line"></span><br><span class="line"># 關閉 general log 模式</span><br><span class="line">mysql&gt; set global general_log=off;</span><br></pre></td></tr></table></figure>
+<pre><code class="mysql"># 設置 general log 保存路徑
+# 注意在 Linux 中只能設置道 /tmp 或 /var 文件夾下，設置其他路徑出錯
+# 需要 root 用戶才有訪問此文件的權限
+mysql&gt; set global general_log file=&#39;/tmp/general.log&#39;;
+
+# 開啟 general log 模式
+mysql&gt; set global general_log=on;
+
+# 關閉 general log 模式
+mysql&gt; set global general_log=off;
+</code></pre>
 <p>在 general log 模式開啟過程中，所有對數據庫的操作都將被記錄在 general.log 文件</p>
 </li>
 <li><p>新建用戶</p>

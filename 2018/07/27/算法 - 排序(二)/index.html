@@ -153,13 +153,82 @@
 <p>遞歸進行排序，每次排序完判斷數組是否已排序完成</p>
 </li>
 <li><p>可先從荷蘭國旗問題進行理解，以下為荷蘭國旗問題答案的代碼:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 荷蘭國旗問題</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NetherlandsFlag</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] partition(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> num) &#123;</span><br><span class="line">        <span class="keyword">int</span> less = l - <span class="number">1</span>; <span class="comment">//小於區域</span></span><br><span class="line">        <span class="keyword">int</span> more = r + <span class="number">1</span>; <span class="comment">//大於區域</span></span><br><span class="line">        <span class="keyword">int</span> cur = l; <span class="comment">//當前位置</span></span><br><span class="line">        <span class="keyword">while</span>(cur &lt; more) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[cur] &lt; num) &#123;</span><br><span class="line">                swap(arr, ++less, l++);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[cur] &gt; num) &#123;</span><br><span class="line">                swap(arr, --more, l);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;less + <span class="number">1</span>, more - <span class="number">1</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j]=  tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+/**
+ * 荷蘭國旗問題
+ */
+public class NetherlandsFlag {
+    public static int[] partition(int[] arr, int l, int r, int num) {
+        int less = l - 1; //小於區域
+        int more = r + 1; //大於區域
+        int cur = l; //當前位置
+        while(cur &lt; more) {
+            if (arr[cur] &lt; num) {
+                swap(arr, ++less, l++);
+            } else if (arr[cur] &gt; num) {
+                swap(arr, --more, l);
+            } else {
+                l++;
+            }
+        }
+        return new int[] {less + 1, more - 1};
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j]=  tmp;
+    }
+}
+</code></pre>
 </li>
 <li><p>時間複雜度 <strong>O($N*logN$)</strong></p>
 <p>空間複雜度 <strong>O($N$)</strong> (隨機快排的劃分點)</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        quickSort(arr, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l &lt; r) &#123;</span><br><span class="line">            swap(arr, l + (<span class="keyword">int</span>) (Math.random() * (r - l + <span class="number">1</span>)), r); <span class="comment">//加上這行為隨機快排</span></span><br><span class="line">            <span class="keyword">int</span>[] p = partition(arr, l, r);</span><br><span class="line">            quickSort(arr, l, p[<span class="number">0</span>] - <span class="number">1</span>);</span><br><span class="line">            quickSort(arr, p[<span class="number">1</span>] + <span class="number">1</span>, r);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] partition(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r) &#123;</span><br><span class="line">        <span class="keyword">int</span> less = l - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> more = r;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; more) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[l] &lt; arr[r]) &#123;</span><br><span class="line">                swap(arr, ++less, l++);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[l] &gt; arr[r]) &#123;</span><br><span class="line">                swap(arr, --more, l);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr, more, r);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;less + <span class="number">1</span>, more&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+public class QuickSort {
+    public static void quickSort(int[] arr) {
+        if (arr == null || arr.length &lt; 2) {
+            return;
+        }
+        quickSort(arr, 0, arr.length - 1);
+    }
+
+    public static void quickSort(int[] arr, int l, int r) {
+        if (l &lt; r) {
+            swap(arr, l + (int) (Math.random() * (r - l + 1)), r); //加上這行為隨機快排
+            int[] p = partition(arr, l, r);
+            quickSort(arr, l, p[0] - 1);
+            quickSort(arr, p[1] + 1, r);
+        }
+    }
+
+    public static int[] partition(int[] arr, int l, int r) {
+        int less = l - 1;
+        int more = r;
+        while (l &lt; more) {
+            if (arr[l] &lt; arr[r]) {
+                swap(arr, ++less, l++);
+            } else if (arr[l] &gt; arr[r]) {
+                swap(arr, --more, l);
+            } else {
+                l++;
+            }
+        }
+        swap(arr, more, r);
+        return new int[] {less + 1, more};
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+</code></pre>
 <h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><ul>
 <li><p>先認識完全二叉數結構:</p>
 <p>左子節點下標: 當前節點 <strong>i * 2 + 1</strong></p>
@@ -182,7 +251,65 @@
 <p>空間複雜度: O(1)</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeapSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            heapInsert(arr, i); <span class="comment">//形成大根堆</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> heapSize = arr.length;</span><br><span class="line">        swap(arr, <span class="number">0</span>, --heapSize); <span class="comment">//最後一個位置的數和0位置交換</span></span><br><span class="line">        <span class="keyword">while</span> (heapSize &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            heapify(arr, <span class="number">0</span>, heapSize); <span class="comment">//調出大根堆</span></span><br><span class="line">            swap(arr, <span class="number">0</span>, --heapSize); <span class="comment">//繼續跟0位置上的數交換</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapInsert</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (arr[index] &gt; arr[(index - <span class="number">1</span>) / <span class="number">2</span>]) &#123; <span class="comment">//子節點比父位置大則交換</span></span><br><span class="line">            swap(arr, index, (index - <span class="number">1</span>) / <span class="number">2</span>);</span><br><span class="line">            index = (index - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapify</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> index, <span class="keyword">int</span> heapSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = index * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt; heapSize) &#123; <span class="comment">//確保子節點不越界</span></span><br><span class="line">            <span class="comment">//判斷兩個子節點中哪個值較大</span></span><br><span class="line">            <span class="keyword">int</span> largest = left + <span class="number">1</span> &lt; heapSize &amp;&amp; arr[left + <span class="number">1</span>] &gt; arr[left]</span><br><span class="line">                    ? left + <span class="number">1</span></span><br><span class="line">                    : left;</span><br><span class="line">            <span class="comment">//左右節點中的最大值和指定數(被改變的數)比較哪個比較大</span></span><br><span class="line">            largest = arr[largest] &gt; arr[index] ? largest : index;</span><br><span class="line">            <span class="comment">//如果最大值是指定數則不用進行交換</span></span><br><span class="line">            <span class="keyword">if</span> (largest == index) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            swap(arr, largest, index);<span class="comment">//largest != index</span></span><br><span class="line">            index = largest;</span><br><span class="line">            left = index * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">8</span>&#125;;</span><br><span class="line">        heapSort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+import java.util.Arrays;
+
+public class HeapSort {
+    public static void heapSort(int[] arr) {
+        if (arr == null || arr.length &lt; 2) {
+            return;
+        }
+        for (int i = 0; i &lt; arr.length; i++) {
+            heapInsert(arr, i); //形成大根堆
+        }
+        int heapSize = arr.length;
+        swap(arr, 0, --heapSize); //最後一個位置的數和0位置交換
+        while (heapSize &gt; 0) {
+            heapify(arr, 0, heapSize); //調出大根堆
+            swap(arr, 0, --heapSize); //繼續跟0位置上的數交換
+        }
+    }
+
+    public static void heapInsert(int[] arr, int index) {
+        while (arr[index] &gt; arr[(index - 1) / 2]) { //子節點比父位置大則交換
+            swap(arr, index, (index - 1) / 2);
+            index = (index - 1) / 2;
+        }
+    }
+
+    public static void heapify(int[] arr, int index, int heapSize) {
+        int left = index * 2 + 1;
+        while (left &lt; heapSize) { //確保子節點不越界
+            //判斷兩個子節點中哪個值較大
+            int largest = left + 1 &lt; heapSize &amp;&amp; arr[left + 1] &gt; arr[left]
+                    ? left + 1
+                    : left;
+            //左右節點中的最大值和指定數(被改變的數)比較哪個比較大
+            largest = arr[largest] &gt; arr[index] ? largest : index;
+            //如果最大值是指定數則不用進行交換
+            if (largest == index) {
+                break;
+            }
+            swap(arr, largest, index);//largest != index
+            index = largest;
+            left = index * 2 + 1;
+        }
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 3, 9, 6, 10, 4, 7, 8};
+        heapSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+}
+</code></pre>
 
             </div>
 

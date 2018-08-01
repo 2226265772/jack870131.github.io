@@ -197,7 +197,39 @@
 <p>空間複雜度: O(1)</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 冒泡排序</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jack870131</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BubbleSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//數組為空或長度小於2不需要排序時直接返回</span></span><br><span class="line">        <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//每一回合最後一個數都是最大的，故下次回合不需要再對上一會核最後一個數進行比較</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> end = arr.length - <span class="number">1</span>; end &gt; <span class="number">0</span>; end--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; end; i++) &#123;</span><br><span class="line">                <span class="comment">//每循環到一個數便與後面一位進行比較</span></span><br><span class="line">                <span class="keyword">if</span> (arr[i] &gt; arr[i + <span class="number">1</span>]) &#123;</span><br><span class="line">                    swap(arr, i, i + <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+import java.util.Arrays;
+
+/**
+ * 冒泡排序
+ *
+ * @author jack870131
+ */
+public class BubbleSort {
+    public static void bubbleSort(int[] arr) {
+        //數組為空或長度小於2不需要排序時直接返回
+        if (arr == null || arr.length &lt; 2) {
+            return;
+        }
+        //每一回合最後一個數都是最大的，故下次回合不需要再對上一會核最後一個數進行比較
+        for (int end = arr.length - 1; end &gt; 0; end--) {
+            for (int i = 0; i &lt; end; i++) {
+                //每循環到一個數便與後面一位進行比較
+                if (arr[i] &gt; arr[i + 1]) {
+                    swap(arr, i, i + 1);
+                }
+            }
+        }
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+</code></pre>
 <h1 id="選擇排序"><a href="#選擇排序" class="headerlink" title="選擇排序"></a>選擇排序</h1><ul>
 <li><p>選擇排序的方法:</p>
 <p>0到 N - 1位的範圍上找最小的數擺在第1位，0到 N - 2 位的範圍上找最小的數擺在第2位，以此類推。</p>
@@ -206,7 +238,37 @@
 <p>空間複雜度: O(1)</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 選擇排序</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jack870131</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SelectionSort</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">selectionSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//如果数組為空或長度小於2不需要進行比較時直接返回</span></span><br><span class="line">		<span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line"> 		<span class="comment">//每一次循環到一個數都與其後面的所有數進行比較</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> minIndex = i;</span><br><span class="line">			<span class="comment">//找到其後最小的數的下標</span></span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">				minIndex = arr[j] &lt; arr[minIndex] ? j : minIndex;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//進行交換</span></span><br><span class="line">			swap(arr, i, minIndex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> minIndex)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> temp = arr[i];</span><br><span class="line">		arr[i] = arr[minIndex];</span><br><span class="line">		arr[minIndex] = temp;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+/**
+ * 選擇排序
+ * @author jack870131
+ */
+public class SelectionSort {
+    public static void selectionSort(int[] arr) {
+        //如果数組為空或長度小於2不需要進行比較時直接返回
+        if(arr == null || arr.length &lt; 2) {
+            return;
+        }
+         //每一次循環到一個數都與其後面的所有數進行比較
+        for(int i = 0; i &lt; arr.length - 1; i++) {
+            int minIndex = i;
+            //找到其後最小的數的下標
+            for(int j = i + 1; j &lt; arr.length; j++) {
+                minIndex = arr[j] &lt; arr[minIndex] ? j : minIndex;
+            }
+            //進行交換
+            swap(arr, i, minIndex);
+        }
+    }
+
+    public static void swap(int[] arr, int i, int minIndex) {
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+}
+</code></pre>
 <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><ul>
 <li><p>插入排序的方法:</p>
 <p>就像玩牌時一樣，一次抓一堆牌進行排列。由左往右每次抓一張牌，每抓起一張則檢查是否可以將其插入左邊的牌中。也就是每一次循環都使0至循環到的數之前的每一位都排序好。</p>
@@ -219,7 +281,39 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 選擇排序</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jack870131</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InsertionSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertionSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//如果数組為空或長度小於2則直接返回</span></span><br><span class="line">        <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//每次循環一個數</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * 循環到的數的前一位數與其進行比較，如果大於則進行交換，</span></span><br><span class="line"><span class="comment">             * 不斷往前進行比較直到循環到的數之前的數都排序好才進行</span></span><br><span class="line"><span class="comment">             * 下一次循環</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; arr[j + <span class="number">1</span>]; j--) &#123;</span><br><span class="line">                swap(arr, j, j + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+/**
+ * 選擇排序
+ *
+ * @author jack870131
+ */
+public class InsertionSort {
+    public static void insertionSort(int[] arr) {
+        //如果数組為空或長度小於2則直接返回
+        if (arr == null || arr.length &lt; 2) {
+            return;
+        }
+        //每次循環一個數
+        for (int i = 1; i &lt; arr.length; i++) {
+            /*
+             * 循環到的數的前一位數與其進行比較，如果大於則進行交換，
+             * 不斷往前進行比較直到循環到的數之前的數都排序好才進行
+             * 下一次循環
+             */
+            for (int j = i - 1; j &gt;= 0 &amp;&amp; arr[j] &gt; arr[j + 1]; j--) {
+                swap(arr, j, j + 1);
+            }
+        }
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+</code></pre>
 <h1 id="遞歸"><a href="#遞歸" class="headerlink" title="遞歸"></a>遞歸</h1><p>剖析遞歸行為和遞歸行為時間複雜度的估算</p>
 <h2 id="master-公式的使用"><a href="#master-公式的使用" class="headerlink" title="master 公式的使用"></a>master 公式的使用</h2><p>n: 主問題的樣本量</p>
 <p>a: 該過程一共發生多少次</p>
@@ -244,9 +338,105 @@
 <p>&rArr; O(N)</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 歸併排序</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jack870131</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MergeSort</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		sortProcess(arr, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sortProcess</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(left == right) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> mid = left + ((right - left) &gt;&gt; <span class="number">1</span>); <span class="comment">//left 和 right 中點的位置 (left + right) / 2</span></span><br><span class="line">		<span class="comment">//左部分排序  T(N / 2)</span></span><br><span class="line">		sortProcess(arr, left, mid);</span><br><span class="line">		<span class="comment">//右部分排序 T(N / 2)</span></span><br><span class="line">		sortProcess(arr, mid + <span class="number">1</span>, right);</span><br><span class="line">		<span class="comment">//合併數組  O(N)</span></span><br><span class="line">		merge(arr, left, mid, right);</span><br><span class="line">		<span class="comment">// T(N) = 2 T(N / 2) + O(N)</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> left, <span class="keyword">int</span> mid, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//輔助數組</span></span><br><span class="line">		<span class="keyword">int</span>[] help = <span class="keyword">new</span> <span class="keyword">int</span>[right - left + <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> p1 = left;</span><br><span class="line">		<span class="keyword">int</span> p2 = mid + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(p1 &lt;= mid &amp;&amp; p2 &lt;= right) &#123;</span><br><span class="line">			help[i++] = arr[p1] &lt; arr[p2] ? arr[p1++] : arr[p2++];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//兩個必有一個越界</span></span><br><span class="line">		<span class="keyword">while</span>(p1 &lt;= mid) &#123;</span><br><span class="line">			help[i++] = arr[p1++];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(p2 &lt;= right) &#123;</span><br><span class="line">			help[i++] = arr[p2++];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; help.length; i++) &#123;</span><br><span class="line">			arr[left + i] = help[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+/**
+ * 歸併排序
+ * @author jack870131
+ */
+public class MergeSort {
+    public static void mergeSort(int[] arr) {
+        if(arr == null || arr.length &lt; 2) {
+            return;
+        }
+        sortProcess(arr, 0, arr.length - 1);
+    }
+
+    public static void sortProcess(int[] arr, int left, int right) {
+        if(left == right) {
+            return;
+        }
+        int mid = left + ((right - left) &gt;&gt; 1); //left 和 right 中點的位置 (left + right) / 2
+        //左部分排序  T(N / 2)
+        sortProcess(arr, left, mid);
+        //右部分排序 T(N / 2)
+        sortProcess(arr, mid + 1, right);
+        //合併數組  O(N)
+        merge(arr, left, mid, right);
+        // T(N) = 2 T(N / 2) + O(N)
+    }
+
+    public static void merge(int[] arr, int left, int mid, int right) {
+        //輔助數組
+        int[] help = new int[right - left + 1];
+        int i = 0;
+        int p1 = left;
+        int p2 = mid + 1;
+        while(p1 &lt;= mid &amp;&amp; p2 &lt;= right) {
+            help[i++] = arr[p1] &lt; arr[p2] ? arr[p1++] : arr[p2++];
+        }
+        //兩個必有一個越界
+        while(p1 &lt;= mid) {
+            help[i++] = arr[p1++];
+        }
+        while(p2 &lt;= right) {
+            help[i++] = arr[p2++];
+        }
+        for(i = 0; i &lt; help.length; i++) {
+            arr[left + i] = help[i];
+        }
+    }
+}
+</code></pre>
 <h3 id="小和問題"><a href="#小和問題" class="headerlink" title="小和問題"></a>小和問題</h3><p>在一個數組中，每一個數左邊比當前數小的數累加起來，叫做這個數組的小和。求一個數組<br>的小和。<br>例子：<br>[1,3,4,2,5]<br>1左邊比1小的數，沒有；<br>3左邊比3小的數，1；<br>4左邊比4小的數，1、3；<br>2左邊比2小的數，1；<br>5左邊比5小的數，1、3、4、2；<br>所以小和為1+1+3+1+1+3+4+2=16</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pers.sort;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 小和問題</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jack870131</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SmallSum</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">smallSum</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> mergeSort(arr, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(l == r) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> mid = l + ((r - l) &gt;&gt; <span class="number">1</span>); <span class="comment">//mid = left + (right - left) / 2</span></span><br><span class="line">		<span class="keyword">return</span> mergeSort(arr, <span class="number">1</span>, mid)</span><br><span class="line">				+ mergeSort(arr, mid + <span class="number">1</span>, r)</span><br><span class="line">				+ merge(arr, <span class="number">1</span>, mid, r);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> m, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] help = <span class="keyword">new</span> <span class="keyword">int</span>[r - <span class="number">1</span> + <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> p1 = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> p2 = m + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(p1 &lt;= m &amp;&amp; p2 &lt;= r) &#123;</span><br><span class="line">			<span class="comment">//p1 比 p2 小時，p2後面有多少個數乘當前p1自己 = p1 被榨出來的數量</span></span><br><span class="line">			res += arr[p1] &lt; arr[p2] ? (r - p2 + <span class="number">1</span>) * arr[p1] : <span class="number">0</span>;</span><br><span class="line">			help[i++] = arr[p1] &lt; arr[p2] ? arr[p1++] : arr[p2++];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(p1 &lt;= m) &#123;</span><br><span class="line">			help[i++] = arr[p1++];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(p2 &lt;= r) &#123;</span><br><span class="line">			help[i++] = arr[p2++];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; help.length; i++) &#123;</span><br><span class="line">			arr[l + i] = help[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">package pers.sort;
+
+/**
+ * 小和問題
+ * @author jack870131
+ */
+public class SmallSum {
+    public static int smallSum(int[] arr) {
+        if(arr == null || arr.length &lt; 2) {
+            return 0;
+        }
+        return mergeSort(arr, 0, arr.length - 1);
+    }
+
+    public static int mergeSort(int[] arr, int l, int r) {
+        if(l == r) {
+            return 0;
+        }
+        int mid = l + ((r - l) &gt;&gt; 1); //mid = left + (right - left) / 2
+        return mergeSort(arr, 1, mid)
+                + mergeSort(arr, mid + 1, r)
+                + merge(arr, 1, mid, r);
+    }
+
+    public static int merge(int[] arr, int l, int m, int r) {
+        int[] help = new int[r - 1 + 1];
+        int i = 0;
+        int p1 = 1;
+        int p2 = m + 1;
+        int res = 0;
+        while(p1 &lt;= m &amp;&amp; p2 &lt;= r) {
+            //p1 比 p2 小時，p2後面有多少個數乘當前p1自己 = p1 被榨出來的數量
+            res += arr[p1] &lt; arr[p2] ? (r - p2 + 1) * arr[p1] : 0;
+            help[i++] = arr[p1] &lt; arr[p2] ? arr[p1++] : arr[p2++];
+        }
+        while(p1 &lt;= m) {
+            help[i++] = arr[p1++];
+        }
+        while(p2 &lt;= r) {
+            help[i++] = arr[p2++];
+        }
+        for(i = 0; i &lt; help.length; i++) {
+            arr[l + i] = help[i];
+        }
+        return res;
+    }
+}
+</code></pre>
 
             </div>
 

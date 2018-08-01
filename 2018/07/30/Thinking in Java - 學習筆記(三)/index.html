@@ -169,7 +169,20 @@
 <li>一般的 break 會中斷並跳出當前循環</li>
 <li>帶標籤的 break 會中斷並跳出標籤所指的循環</li>
 </ul>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">label;</span><br><span class="line">outer-iteration &#123;</span><br><span class="line">    inner-iteration &#123;</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">break</span>; <span class="comment">//(1)</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">continue</span>; <span class="comment">//(2)</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">continue</span> label; <span class="comment">//(3)</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">break</span>; <span class="comment">//(4)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><pre><code class="java">label;
+outer-iteration {
+    inner-iteration {
+        ...
+        break; //(1)
+        ...
+        continue; //(2)
+        ...
+        continue label; //(3)
+        ...
+        break; //(4)
+    }
+}
+</code></pre>
 <ul>
 <li><strong>(1)</strong> <strong>break</strong> 中斷內部迭代，回到外部迭代</li>
 <li><strong>(2)</strong> <strong>continue</strong> 使執行點移回內部迭代的起始處</li>
