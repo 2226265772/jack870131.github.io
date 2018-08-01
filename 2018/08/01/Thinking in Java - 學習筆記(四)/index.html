@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/08/">August 2018</a></li><li><a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="簡歷">
+		                簡歷
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="標簽">
+		                標簽
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/java.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Thinking in Java - 學習筆記(四)</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="Constructor-構造器"><a href="#Constructor-構造器" class="headerlink" title="Constructor 構造器"></a>Constructor 構造器</h1><ul>
+<li><p>在 Java 中，”<strong>初始化</strong>“與”<strong>創建</strong>“綑綁在一起</p>
+</li>
+<li><p>為了讓方法名相同而形式參數不同的構造器同時存在，必須用到<strong>方法重載</strong></p>
+</li>
+<li><p>每個重載的方法都必須有一個獨一無二的參數類型列表(有相同的參數但<strong>順序不同</strong>也是可以的)</p>
+</li>
+<li><p>如果寫的類中沒有構造器，則編譯器會自動創建一個<strong>默認的無參構造器</strong></p>
+<p>如果已經寫了一個構造器(不管有無參數)，編譯器便<strong>不會</strong>再自動創建無參構造器(如果需要，需手動創建)</p>
+</li>
+<li><p>構造器沒有顯示的使用 static 關鍵字，但實際上也是<strong>靜態方法</strong></p>
+</li>
+</ul>
+<h1 id="this-關鍵字"><a href="#this-關鍵字" class="headerlink" title="this 關鍵字"></a>this 關鍵字</h1><ul>
+<li><p>this 關鍵字只能再方法內部使用，表示對”<strong>調用方法的那個對象</strong>“的引用</p>
+<p> 通常寫 this 的時候都是指”<strong>這個對象</strong>“或”<strong>當前對象</strong>“，而他本身表示對當前對象的引用</p>
+</li>
+<li><p>如果在方法內部調用同一個類的另一個方法，就不必使用 this, 直接調用即可</p>
+</li>
+<li><p>如果 this 添加了參數列表(如: this(xxx, xxx)), 將產生對<strong>符合此參數列表的某個構造器</strong>的明確調用</p>
+</li>
+</ul>
+<h1 id="重新認識-static"><a href="#重新認識-static" class="headerlink" title="重新認識 static"></a>重新認識 static</h1><p>了解 this 關鍵字後，能夠更加全面的認識 static (靜態) 方法的涵義。</p>
+<ul>
+<li><p>static 方法是<strong>沒有 this</strong> 的方法</p>
+</li>
+<li><p>在 static 方法的內部不能調用<strong>非靜態方法</strong>，反過來是可以的</p>
+<p>可以在沒有創建任何對象的前提下，僅僅通過類本身來調用 static 方法</p>
+</li>
+</ul>
+<h1 id="清理-終結處理和垃圾回收"><a href="#清理-終結處理和垃圾回收" class="headerlink" title="清理: 終結處理和垃圾回收"></a>清理: 終結處理和垃圾回收</h1><ul>
+<li><p><strong>垃圾回收要點</strong>:</p>
+<ul>
+<li>對象可能不被垃圾回收</li>
+<li>垃圾回收並不等於 C++ 的”析構”(C++ 中銷毀對象必須用到這個函數</li>
+<li>垃圾回收只與內存有關</li>
+</ul>
+</li>
+<li><p>Java 的垃圾回收器負責回收<strong>無用對象</strong>佔據的內存資源</p>
+</li>
+<li><p>垃圾回收器只知道釋放經由 new 分配的內存</p>
+</li>
+<li><p>一旦垃圾回收器準備好釋放對象占用的存儲空間，將首先調用其 <strong>finalize()</strong> 方法，並在<strong>下一次</strong>垃圾回收動作發生時，才會真正回收對象佔用的內存</p>
+</li>
+<li><p>垃圾回收器能夠提高<strong>對象創建</strong>的速度</p>
+<ul>
+<li>在 Java 虛擬機中，堆的實現像一個傳送帶，每分配一個新對象，他就往前跑一格，簡單地移動到尚未分配的區域(造成內存消耗)</li>
+<li>垃圾回收器將一面回收空間，一面使堆中的對象緊湊排列，使”堆指針”很容易移動倒更靠近傳送帶的開始處</li>
+</ul>
+</li>
+<li><p>Java 虛擬機將採用<strong>自適應</strong>的垃圾回收技術</p>
+<ul>
+<li><p><strong>停止 - 複製(stop-and-copy)</strong></p>
+<ul>
+<li>先暫停程序的運行，然後將所有存活的對象從當前堆複製到另一個堆，沒有被複製的全部屬於垃圾</li>
+<li>當對象被複製到新堆時，是一個挨著一個的，所以新堆保持緊湊排列</li>
+<li>把對象從一處搬到另一處時，所有指向他的那些<strong>引用</strong>都必須修正，位於<strong>堆</strong>或<strong>靜態存儲區</strong>的引用可以直接被修正，但可能還有其他指向這些對象的引用，在<strong>遍歷</strong>過程中才能被找到</li>
+</ul>
+</li>
+<li><p><strong>標記 - 清掃(mark-and-sweep)</strong></p>
+<ul>
+<li><p>複製式回收器會將所有內存自一處複製到另一處，這樣相當浪費</p>
+<p>為了避免這種狀況，要是沒有新垃圾產生，就會<strong>轉換(自適應)</strong>到另一種工作模式 – <strong>標記 - 清掃</strong></p>
+</li>
+<li><p>從堆棧和靜態存儲區出發，遍歷所有引用，找出存活的對象</p>
+<p>當找到存活對象，就會給對象設一個<strong>標記</strong>(這個過程<strong>還不會回收對象</strong>)，全部標記完成後，清掃工作才會開始</p>
+<p>沒有標記的對象將被釋放，<strong>不會</strong>發生任何複製動作(所以剩下的堆空間不連續，想得到連續空間就得<strong>重新整理</strong>剩下的對象)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Java 虛擬機中，內存分配以較大的”<strong>塊</strong>“為單位，如果對像較大，他會佔據單獨的塊</p>
+<p>“停止 - 複製”方法要求在釋放舊有對象之前，必須先把所有對象從舊堆複製到新堆(大量的複製行為)</p>
+<p>有了塊之後，垃圾回收器在回收的時候舊可以往廢棄的塊裡拷貝對象</p>
+<p>每個塊都有相應的<strong>代數(generation count)</strong>紀錄對象是否存活，如果塊被引用，代數會增加</p>
+<p>垃圾回收器會對上次回收動作之後新分配的塊進行清理</p>
+<p>此方法對小型短命的臨時對象十分有效，大型對象不會被複製(代數會增加), 內含小型對象的塊會被複製並整理</p>
+</li>
+<li><p>Java 的垃圾回收器: “<strong>自適應的、分代的、停止 - 複製、標記 - 清掃</strong>“</p>
+</li>
+</ul>
+<h1 id="對象創建過程"><a href="#對象創建過程" class="headerlink" title="對象創建過程"></a>對象創建過程</h1><ol>
+<li><p>即使沒有顯示使用 static, 構造器也是靜態方法</p>
+<p>因此，當首次創建類型為 Dog 的對象時，或者 Dog 類的靜態方法/靜態域首次被訪問時，Java 解釋器必須查找類路徑，定位 Dog.class 文件</p>
+</li>
+<li><p>載入 Dog.class (這將創案一個 Class 對象), 有關靜態初始化的所有動作都會執行</p>
+<p>因此，靜態初始化只在 Class 對象首次加載的時候進行一次</p>
+</li>
+<li><p>當用 new Dog() 創建對象的時候，首先將在堆上為 Dog 對象分配足夠的存儲空間</p>
+</li>
+<li><p>這塊存儲空間會被清零，自動將 Dog 對象中的所有基本類型數據都設置成默認值, 而引用設置為 null</p>
+</li>
+<li><p>執行所有出現於字段定義處的初始化動作</p>
+</li>
+<li><p>執行構造器</p>
+</li>
+</ol>
+<h1 id="可變參數列表"><a href="#可變參數列表" class="headerlink" title="可變參數列表"></a>可變參數列表</h1><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>example<span class="token punctuation">.</span>initialize<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OptionalTrailingArguments</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token keyword">int</span> required<span class="token punctuation">,</span> String<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> trailing<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"required: "</span> <span class="token operator">+</span> required <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>String s <span class="token operator">:</span> trailing<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>s <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"one"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">f</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"three"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">f</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*
+required: 1 one 
+required: 2 three 
+required: 0 
+*/</span>
+</code></pre>
+<h1 id="枚舉類型"><a href="#枚舉類型" class="headerlink" title="枚舉類型"></a>枚舉類型</h1><ul>
+<li><strong>enum</strong> 關鍵字使我們在需要群組並使用枚舉類型集時，可以很方便的處理</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>example<span class="token punctuation">.</span>initialize<span class="token punctuation">;</span>
+
+<span class="token keyword">enum</span> Spiciness <span class="token punctuation">{</span>
+    NOT<span class="token punctuation">,</span> MILD<span class="token punctuation">,</span> MEDIUM<span class="token punctuation">,</span> HOT<span class="token punctuation">,</span> FLAMING
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SimpleEnumUse</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Spiciness howHot <span class="token operator">=</span> Spiciness<span class="token punctuation">.</span>HOT<span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>howHot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*
+HOT
+*/</span>
+</code></pre>
+<ul>
+<li>enum 確實是<strong>類</strong>，且有一個特別實用的特性，其可以在 switch 語句內使用</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>example<span class="token punctuation">.</span>initialize<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Burrito</span> <span class="token punctuation">{</span>
+    Spiciness degree<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">Burrito</span><span class="token punctuation">(</span>Spiciness degree<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>degree <span class="token operator">=</span> degree<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">describe</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"This burrito is "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>degree<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> NOT<span class="token operator">:</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"not spicy at all"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> MILD<span class="token operator">:</span>
+            <span class="token keyword">case</span> MEDIUM<span class="token operator">:</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a little hot"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> HOT<span class="token operator">:</span>
+            <span class="token keyword">case</span> FLAMING<span class="token operator">:</span>
+            <span class="token keyword">default</span><span class="token operator">:</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"to hot"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Burrito
+            plain <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Burrito</span><span class="token punctuation">(</span>Spiciness<span class="token punctuation">.</span>NOT<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            greenChile <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Burrito</span><span class="token punctuation">(</span>Spiciness<span class="token punctuation">.</span>MEDIUM<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            jalapeno <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Burrito</span><span class="token punctuation">(</span>Spiciness<span class="token punctuation">.</span>HOT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        plain<span class="token punctuation">.</span><span class="token function">describe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        greenChile<span class="token punctuation">.</span><span class="token function">describe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        jalapeno<span class="token punctuation">.</span><span class="token function">describe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*
+This burrito is not spicy at all
+This burrito is a little hot
+This burrito is to hot
+*/</span>
+</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

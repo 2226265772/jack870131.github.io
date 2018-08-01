@@ -34,7 +34,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-  font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font: 350 1em/1.5 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
 
 button::-moz-focus-inner,
@@ -92,8 +92,8 @@ address, caption, cite, code, dfn, em, th, var {
 }
 
 /* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
-ul, ol ,li{
-  list-style: none;
+ul {
+  list-style-type: square;
 }
 
 /* 对齐是排版最重要的因素, 别让什么都居中 */
@@ -242,10 +242,24 @@ strong, b {
   margin-bottom: 1.2em
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h4, h5, h6 {
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
   font-weight: 100;
-  color: #000;
+  color: orange;
+  line-height: 1.35;
+}
+
+h2 {
+  font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-weight: 100;
+  color: red;
+  line-height: 1.35;
+}
+
+h3 {
+  font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-weight: 100;
+  color: purple;
   line-height: 1.35;
 }
 
@@ -285,11 +299,11 @@ h1, h2, h3, h4, h5, h6 {
 /* 在文章中，应该还原 ul 和 ol 的样式 */
 .typo ul, .typo-ul {
   margin-left: 1.3em;
-  list-style: disc;
+  list-style: square;
 }
 
 .typo ol, .typo-ol {
-  list-style: decimal;
+  list-style: upper-roman;
   margin-left: 1.9em;
 }
 
