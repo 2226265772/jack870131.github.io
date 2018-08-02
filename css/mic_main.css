@@ -386,7 +386,11 @@
 		}
 
 	body {
-		color: #212931;
+		color: #555;
+	}
+
+	.typo {
+		background-color: #F6F6F6;
 	}
 
 	body, input, select, textarea {
