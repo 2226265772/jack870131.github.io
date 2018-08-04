@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/08/">August 2018</a></li><li><a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tag/" title="標籤">
+		                標籤
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/about/" title="關於我">
+		                關於我
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/algorithm.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >SSM框架 - 認識SSM框架和Redis</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>最近開始進入學習 Java 框架的部分了，閱讀的是《JavaEE 互聯網輕量級框架整合開發 – SSM框架(Spring + SpringMVC + MyBatis)和 Redis 實現》 這本書。一樣將我的每次閱讀的學習心得放上這裡跟大家分享。</p>
+<h1 id="Spring-框架"><a href="#Spring-框架" class="headerlink" title="Spring 框架"></a>Spring 框架</h1><h2 id="Spring-IoC-Inversion-of-Control-控制反轉"><a href="#Spring-IoC-Inversion-of-Control-控制反轉" class="headerlink" title="Spring IoC (Inversion of Control, 控制反轉)"></a>Spring IoC (Inversion of Control, 控制反轉)</h2><ul>
+<li><p>IoC 是一個<strong>容器</strong>，他會認為依竊 Java 資源都是 <strong>Java Bean</strong>, 容器的目標為<strong>管理這些 Bean 和他們之間的關係</strong></p>
+</li>
+<li><p>個個 Java Bean 之間會存在一定的依賴關係，比如班級是一來於老師和學生組成，兩者之間形成了依賴關係，老師和學生有教育和被教育的關係</p>
+</li>
+<li><p>Spring 是依靠<strong>描述</strong>來完成對象的創建及其依賴關係的</p>
+</li>
+<li><p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/%E4%BD%BF%E7%94%A8%E6%8F%92%E5%BA%A7.png?raw=true" alt=""></p>
+<p>如果使用者想要使用插座A，我們可以通過代碼來實現</p>
+<pre class=" language-java"><code class="language-java">Socket socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SocketA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+user<span class="token punctuation">.</span><span class="token function">setSocket</span><span class="token punctuation">(</span>socket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+user<span class="token punctuation">.</span><span class="token function">useSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>我們會發現Socket 接口和實現類 SocketA 耦合了，當用戶要使用插座B時，就要修改代碼</p>
+<pre class=" language-java"><code class="language-java">Socket socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SocketB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+user<span class="token punctuation">.</span><span class="token function">setSocket</span><span class="token punctuation">(</span>socket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+user<span class="token punctuation">.</span><span class="token function">useSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Spring IoC 可以解決這個問題，用戶不須通過 new 的方式創建對象，而是使用配置的方式讓 Spring IoC 容器通過配置找到插座</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"socket"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"Socket1"</span><span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"user"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"xxx.User"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"socket"</span> ref<span class="token operator">=</span><span class="token string">"socket"</span><span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
+</code></pre>
+<p>如果用戶需要插座B則只需要將配置切換為</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"socket"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"Socket2"</span><span class="token operator">></span>
+</code></pre>
+<p>我們可以發現 Socket 接口不再依賴於某個實現類，需要實現類時通過配置信息就可以完成，不需要再重新 new 創建對象了</p>
+</li>
+</ul>
+<h2 id="Spring-AOP-Aspect-Oriented-Programming-面向切面編程"><a href="#Spring-AOP-Aspect-Oriented-Programming-面向切面編程" class="headerlink" title="Spring AOP (Aspect Oriented Programming, 面向切面編程)"></a>Spring AOP (Aspect Oriented Programming, 面向切面編程)</h2><ul>
+<li>切面的意義: 舉個例子，如果一個訂單要通過生產部門和財務部門的審批，第一關生產部門審核通過後，在財務部門發現預算超支要駁回，此決定影響的不僅是財務部門，更影響了之前所做的審批。那麼預算超支就是所謂的<strong>切面</strong></li>
+<li>Spring AOP 常用於<strong>數據庫</strong>事務編程。如同上面的例子，只要出現異常消息，那麼 Spring 就會將事務回滾，使之前的數據更新也作廢，從而保證數據的一致性，不需要通過代碼來實現這個過程</li>
+</ul>
+<h1 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h1><ul>
+<li><p>MyBatis 的優勢在於靈活，幾乎可以代替 JDBC，同時提供了接口編程</p>
+</li>
+<li><p>MyBatis 的 DAO 層(數據訪問層)是不需要實現類的，他只需要一個街口和 XML (或者注解)</p>
+</li>
+<li><p>Hibernate 基本<strong>不需要編寫 SQL</strong> 就可以通過<strong>對象關係映射(Object Relational Mapping, ORM)</strong> 來操作數據庫</p>
+<p>MyBatis 則需編寫<strong>提供 SQL</strong> 去運行，程序員可自定義 SQL 規則，從而<strong>優化性能</strong></p>
+</li>
+<li><p>對於性能要求不高的系統，如管理系統、ERP 等可使用 Hibernate</p>
+<p>對於性能要求高、響應快的系統則可使用 MyBatis</p>
+</li>
+</ul>
+<h1 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h1><ul>
+<li><p>MVC 模式把應用程序(輸入邏輯、業務邏輯和 UI 邏輯)分成不同的方面</p>
+<ul>
+<li>Model (模型)，封裝了應用程序的數據和由他們組成的 POJO</li>
+<li>View (視圖)，負責把模型數據渲染到試圖上，將數據以一定的形式展現給用戶</li>
+<li>Controller (控制器)，負責處理用戶請求，並建立適當的模型把它傳遞給視圖渲染</li>
+</ul>
+</li>
+<li><p>Spring MVC 還可以定義<strong>邏輯視圖</strong>，通過其提供的試圖解析器就能夠很方便的找到對應的視圖進行渲染</p>
+<p>可以使用其<strong>消息轉換</strong>的功能，比如在 Controller 的方法內加入注解 @ResponseBody, Spring MVC 就可以通過消息轉換，將數據轉換為 JSON, 提供給前端 Ajax 使用</p>
+</li>
+</ul>
+<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><ul>
+<li><p>Redis 是目前相當流行的 NoSQL (Not Only SQL)。它可以<strong>提高互聯網系統的性能</strong>，具備一定<strong>持久層</strong>的功能，也可以做為一種<strong>緩存工具</strong></p>
+</li>
+<li><p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/NoSQL.png?raw=true" alt=""></p>
+</li>
+<li><p>對於常用數據，第一次從數據庫讀出，然後就存放在 NoSQL 中，這樣以後就無須再訪問數據庫，只需從 NoSQL 中讀出即可，性能就會比數據庫快</p>
+<p><strong>高併發</strong>的操作，可以在 NoSQL 上完成寫入，等待某一時刻再批量寫入數據庫</p>
+</li>
+<li><p>傳統數據庫需要讀磁盤進行數據讀取</p>
+<p>NoSQL 從數據庫中讀取數據進行緩存，就可以從內存中讀取數據，更能滿足高併發、高速處理數據得場合</p>
+</li>
+</ul>
+<h1 id="SSM-Redis-結構"><a href="#SSM-Redis-結構" class="headerlink" title="SSM + Redis 結構"></a>SSM + Redis 結構</h1><p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/SSM+Redis.png?raw=true" alt=""></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
