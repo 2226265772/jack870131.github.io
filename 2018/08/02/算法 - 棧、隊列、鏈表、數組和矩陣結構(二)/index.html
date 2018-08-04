@@ -147,7 +147,8 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <h1 id="貓狗隊列"><a href="#貓狗隊列" class="headerlink" title="貓狗隊列"></a>貓狗隊列</h1><p> 寵物、狗和貓的類如下：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span> 
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span> 
     <span class="token keyword">private</span> String type<span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token function">Pet</span><span class="token punctuation">(</span>String type<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span> <span class="token punctuation">}</span>
     <span class="token keyword">public</span> String <span class="token function">getPetType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>type<span class="token punctuation">;</span> <span class="token punctuation">}</span>
@@ -175,7 +176,7 @@
 <li>用戶可以調用 isDogEmpty 方法，檢查隊列中是否有 dog 類的實例； </li>
 <li>用戶可以調用 isCatEmpty 方法，檢查隊列中是否有cat類的實例。</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>LinkedList<span class="token punctuation">;</span>
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Queue<span class="token punctuation">;</span>
@@ -326,7 +327,7 @@
 <p>打印結果為：1，2，3，4，8，12，16，15，14，13，9,  5，6，7，11，10</p>
 <p><strong>要求</strong></p>
 <p>額外空間複雜度為O(1)。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RotateMatrix</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -353,7 +354,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <h1 id="反轉單向和雙向鏈表"><a href="#反轉單向和雙向鏈表" class="headerlink" title="反轉單向和雙向鏈表"></a>反轉單向和雙向鏈表</h1><p>分別實現反轉單向鏈表和反轉雙向鏈表的函數。<br><strong>要求</strong><br>如果鏈表長度為N，時間複雜度要求為O(N)，額外空間<br>複雜度要求為O(1)</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ReverseList</span> <span class="token punctuation">{</span>
 
@@ -428,7 +429,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <h1 id="“之”字形打印矩阵"><a href="#“之”字形打印矩阵" class="headerlink" title="“之”字形打印矩阵"></a>“之”字形打印矩阵</h1><p>给定一个矩阵matrix，按照“之”字形的方式打印这<br>个矩阵，例如： 1 2 3 4 5 6 7 8 9 10 11 12<br>“之”字形打印的结果为：1，2，5，9，6，3，4，7，10，11，<br>8，12<br><strong>要求</strong><br>额外空间复杂度为O(1)。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ZigZagPrintMatrix</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">printMatrixZigZag</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -473,7 +474,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <h1 id="在行列都排好序的矩陣中找數"><a href="#在行列都排好序的矩陣中找數" class="headerlink" title="在行列都排好序的矩陣中找數"></a>在行列都排好序的矩陣中找數</h1><p>給定一個有N*M的整型矩陣matrix和一個整數K，<br>matrix的每一行和每一 列都是排好序的。實現一個函數，判斷K<br>是否在matrix中。 例如： 0 1 2 5 2 3 4 7 4<br>4 4 8 5 7 7 9 如果K為7，返回true；如果K為6，返<br>回false。<br><strong>要求</strong><br>時間複雜度為O(N+M)，額外空間複雜度為O(1)。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FindNumInSortedMatrix</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isContains</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">,</span> <span class="token keyword">int</span> K<span class="token punctuation">)</span> <span class="token punctuation">{</span>

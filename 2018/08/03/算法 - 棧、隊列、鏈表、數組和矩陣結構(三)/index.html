@@ -150,7 +150,7 @@
 <p>進階</p>
 <p>如果鏈表長度為N，時間複雜度達到O(N)，額外空間複雜</p>
 <p>度達到O(1)。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Stack<span class="token punctuation">;</span>
 
@@ -259,7 +259,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <h1 id="荷蘭國旗問題-單向鏈表"><a href="#荷蘭國旗問題-單向鏈表" class="headerlink" title="荷蘭國旗問題(單向鏈表)"></a>荷蘭國旗問題(單向鏈表)</h1><p>給定一個單向鏈表的頭節點head，節點的值類型是整型，再給定一個整數pivot。實現一個調整鏈表的函數，將鏈表調整為左部分都是值小于 pivot 的節點，中間部分都是值等于pivot的節點，部分都是值大于 pivot的節點。<br>除這個要求外，對調整後的節點順序沒有更多的要求。 例如：鏈表9-&gt;0-&gt;4-&gt;5-&gt;1，pivot=3。 調整後鏈表可以是1-&gt;0-&gt;4-&gt;9-&gt;5，也可以是0-&gt;1-&gt;9-&gt;5-&gt;4。總之，滿 足左部分都是小于3的節點，中間部分都是等于3的節點（本例中這個部分為空)，右部分都是大于3的節點即可。對某部分內部的節點順序不做要求。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SmallerEqualBigger</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
@@ -385,7 +385,7 @@ Node rand<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>Node類中的value是節點值，next指針和正常單鏈表中next指針的意義一樣，都指向下一個節點，rand指針是Node類中新增的指針，這個指針可能指向鏈表中的任意一個節點，也可能指向null。 給定一個由Node節點類型組成的無環單鏈表的頭節點head，請實現一個 函數完成這個鏈表中所有結構的複制，並返回複制的新鏈表的頭節點。<br><strong>進階</strong><br>不使用額外的數據結構，只用有限幾個變量，且在時間複雜度為 O(N) 內完成原問題要實現的函數。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashMap<span class="token punctuation">;</span>
 
@@ -472,7 +472,7 @@ Node rand<span class="token punctuation">;</span>
 <h1 id="兩個單鏈表相交的一系列問題"><a href="#兩個單鏈表相交的一系列問題" class="headerlink" title="兩個單鏈表相交的一系列問題"></a>兩個單鏈表相交的一系列問題</h1><p>在本題中，單鏈表可能有環，也可能無環。給定兩個<br>單鏈表的頭節點 head1和head2，這兩個鏈表可能相交，也可能<br>不相交。請實現一個函數， 如果兩個鏈表相交，請返回相交的<br>第一個節點；如果不相交，返回null 即可。<br><strong>要求</strong><br>如果鏈表1<br>的長度為N，鏈表2的長度為M，時間複雜度請達到 O(N+M)，額外空間複雜度請達到O(1)。</p>
 <p>注意此題兩鏈表可以有三種相交方式(第一種為不相交)</p>
 <p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/%E4%B8%89%E7%A8%AE%E4%BA%A4%E9%9B%86%E6%96%B9%E5%BC%8F.jpg?raw=true" alt=""></p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>datastructure<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>stackqueue<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FindFirstIntersectNode</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
