@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/08/">August 2018</a></li><li><a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tag/" title="標籤">
+		                標籤
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/about/" title="關於我">
+		                關於我
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/algorithm.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >算法 - 哈希與併查集</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="哈希與併查集"><a href="#哈希與併查集" class="headerlink" title="哈希與併查集"></a>哈希與併查集</h1><h2 id="哈希函數"><a href="#哈希函數" class="headerlink" title="哈希函數"></a>哈希函數</h2><p>假設一個字符串，輸出域是固定的範圍S，具有如下性質:</p>
+<ul>
+<li>輸入域無窮大</li>
+<li>輸出域有窮盡</li>
+<li>非隨機的(輸入一樣，輸出一定一樣)</li>
+<li>哈希碰撞: 輸入不一樣也有可能得到相同輸出，也可能不相同(會有不同的輸入值對應在 S 中的一個元素上</li>
+<li>哈希離散性: 如果有許多相同輸入，將會在哈希域的各返回值上均勻分布</li>
+<li>哈希函數與輸入的規律是沒有關係的</li>
+</ul>
+<h1 id="布隆過濾器"><a href="#布隆過濾器" class="headerlink" title="布隆過濾器"></a>布隆過濾器</h1><ul>
+<li><p>解決網頁黑名單系統、垃圾郵件過濾、爬蟲網址判重等問題(可容忍一定程度失誤率，但對空間要求比較嚴格)</p>
+</li>
+<li><p>一個布隆過濾器精確地代表一個集合，並判斷一個元素是否在集合中</p>
+</li>
+<li><p>布隆過濾器的優勢: 使用很少的空間就可以將準確率做到很高的程度</p>
+</li>
+<li><p>具體的布隆過濾器運算方式如下:</p>
+<p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/%E5%B8%83%E9%9A%86%E9%81%8E%E6%BF%BE%E5%99%A8.png?raw=true" alt=""></p>
+</li>
+</ul>
+<h1 id="一致性哈希"><a href="#一致性哈希" class="headerlink" title="一致性哈希"></a>一致性哈希</h1><ul>
+<li><p>一致性哈希原理圖:</p>
+<p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C.png?raw=true" alt=""></p>
+</li>
+<li><p>一致性哈希是一種數據緩存設計方案</p>
+<ul>
+<li><p>使數據的 id 通過哈希函數轉換到數字空間中</p>
+</li>
+<li><p>這些數字頭尾相連，形成一個閉合的環形空間</p>
+</li>
+<li><p>一個數據 id 在計算出哈希值後對應到環中位置</p>
+</li>
+<li><p>將機器也根據 id 經過哈希函數計算並放入環中對應位置</p>
+</li>
+<li><p>數據根據順時針方向找到最近的機器以確立歸屬於哪台機器的計算範圍</p>
+</li>
+<li><p>如果新加入機器則一樣將數據依照順時針方向找放入最近的機器中</p>
+</li>
+<li><p>如果機器在環上分布不均則將導致負載不均</p>
+<p>可使用虛擬節點(等於由原機器衍生出的虛擬機器)，並計算其哈希值放入環中對應位置使節點數增加</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="設計RandomPool結構"><a href="#設計RandomPool結構" class="headerlink" title="設計RandomPool結構"></a>設計RandomPool結構</h1><p>設計一種結構，在該結構中有如下三個功能：<br>insert(key)：將某個key加入到該結構，做到不重複加入。<br>delete(key)：將原本在結構中的某個key移除。<br>getRandom()：等概率隨機返回結構中的任何一個key。<br>Insert、delete和getRandom方法的時間複雜度都是 O(1)</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>hash<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashMap<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RandomPool</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Pool</span><span class="token operator">&lt;</span>K<span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> HashMap<span class="token operator">&lt;</span>K<span class="token punctuation">,</span> Integer<span class="token operator">></span> keyIndexMap<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> HashMap<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> K<span class="token operator">></span> indexKeyMap<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> size<span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token function">Pool</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>keyIndexMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span>K<span class="token punctuation">,</span> Integer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>indexKeyMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> K<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span>K key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>keyIndexMap<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>keyIndexMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>indexKeyMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token operator">++</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">delete</span><span class="token punctuation">(</span>K key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>keyIndexMap<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">int</span> deleteIndex <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>keyIndexMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">int</span> lastIndex <span class="token operator">=</span> <span class="token operator">--</span><span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">;</span>
+                K lastKey <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>indexKeyMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>lastIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>keyIndexMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>lastKey<span class="token punctuation">,</span> deleteIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>indexKeyMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>deleteIndex<span class="token punctuation">,</span> lastKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>keyIndexMap<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>indexKeyMap<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>lastIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> K <span class="token function">getRandom</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">int</span> randomIndex <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>indexKeyMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>randomIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="併查集"><a href="#併查集" class="headerlink" title="併查集"></a>併查集</h1><ul>
+<li>查詢兩個元素是否屬於一個集合</li>
+<li>兩個元素各自所在的集合合併在一起</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>hash<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashMap<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>List<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UnionFind</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UnionFindSet</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> HashMap<span class="token operator">&lt;</span>Node<span class="token punctuation">,</span> Node<span class="token operator">></span> fatherMap<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Key: child, value: father</span>
+        <span class="token keyword">public</span> HashMap<span class="token operator">&lt;</span>Node<span class="token punctuation">,</span> Integer<span class="token operator">></span> sizeMap<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//所在集合一共有多少節點</span>
+
+        <span class="token keyword">public</span> <span class="token function">UnionFindSet</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>Node<span class="token operator">></span> nodes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">makeSets</span><span class="token punctuation">(</span>nodes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">makeSets</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>Node<span class="token operator">></span> nodes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            fatherMap<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sizeMap<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>Node node <span class="token operator">:</span> nodes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                fatherMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                sizeMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">private</span> Node <span class="token function">findHead</span><span class="token punctuation">(</span>Node node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Node father <span class="token operator">=</span> fatherMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>father <span class="token operator">!=</span> node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                father <span class="token operator">=</span> <span class="token function">findHead</span><span class="token punctuation">(</span>father<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            fatherMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span> father<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> father<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">isSameSet</span><span class="token punctuation">(</span>Node a<span class="token punctuation">,</span> Node b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">findHead</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token function">findHead</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">union</span><span class="token punctuation">(</span>Node a<span class="token punctuation">,</span> Node b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> null <span class="token operator">||</span> b <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            Node aHead <span class="token operator">=</span> <span class="token function">findHead</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Node bHead <span class="token operator">=</span> <span class="token function">findHead</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>aHead <span class="token operator">!=</span> bHead<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">int</span> aSetSize <span class="token operator">=</span> sizeMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>aHead<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">int</span> bSetSize <span class="token operator">=</span> sizeMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>bHead<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>aSetSize <span class="token operator">&lt;=</span> bSetSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    fatherMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>aHead<span class="token punctuation">,</span> bHead<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    sizeMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>bHead<span class="token punctuation">,</span> aSetSize <span class="token operator">+</span> bSetSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    fatherMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>bHead<span class="token punctuation">,</span> aHead<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    sizeMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>aHead<span class="token punctuation">,</span> aSetSize <span class="token operator">+</span> bSetSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="島問題"><a href="#島問題" class="headerlink" title="島問題"></a>島問題</h1><p>一個矩陣中只有0和1兩種值，每個位置都可以和自己的上、下、左、右四個位置相連，如果有一片1連在一起，這個部分叫做一個島，求一個矩陣中有多少個島？<br><strong>Example</strong><br>0 0 1 0 1 0<br>1 1 1 0 1 0<br>1 0 0 1 0 0<br>0 0 0 0 0 0<br>這個矩陣中有三個島。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>hash<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Islands</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">countIslands</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> m<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">==</span> null <span class="token operator">||</span> m<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> N <span class="token operator">=</span> m<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> M <span class="token operator">=</span> m<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> M<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    res<span class="token operator">++</span><span class="token punctuation">;</span>
+                    <span class="token function">infect</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> N<span class="token punctuation">,</span> M<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">infect</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">,</span> <span class="token keyword">int</span> N<span class="token punctuation">,</span> <span class="token keyword">int</span> M<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> i <span class="token operator">>=</span> N <span class="token operator">||</span> j <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> j <span class="token operator">>=</span> M <span class="token operator">||</span> m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token function">infect</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> j<span class="token punctuation">,</span> N<span class="token punctuation">,</span> M<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">infect</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> j<span class="token punctuation">,</span> N<span class="token punctuation">,</span> M<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">infect</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> N<span class="token punctuation">,</span> M<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">infect</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> N<span class="token punctuation">,</span> M<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
