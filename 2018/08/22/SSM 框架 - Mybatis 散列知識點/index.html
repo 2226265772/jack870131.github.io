@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/08/">August 2018</a></li><li><a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tag/" title="標籤">
+		                標籤
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/about/" title="關於我">
+		                關於我
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/ssm.jpg?raw=trues);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >SSM框架 - 認識SSM框架和Redis</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>這邊先簡單且分散的記錄一點自己學習 Mybatis 的心得，主要由慕客網(<a href="https://www.imooc.com/learn/154)進行學習，之後自己融會貫通後再好好寫正式的" target="_blank" rel="noopener">https://www.imooc.com/learn/154)進行學習，之後自己融會貫通後再好好寫正式的</a> SSM 框架知識點整理</p>
+<h1 id="Mybatis-特點"><a href="#Mybatis-特點" class="headerlink" title="Mybatis 特點"></a>Mybatis 特點</h1><ul>
+<li><p>SQL 語句與代碼分離</p>
+<ul>
+<li>優點: 便於管理和維護</li>
+<li>缺點: 不便於調試，需要借助日誌工具(log4j)獲得信息</li>
+</ul>
+</li>
+<li><p>用標籤控制動態 SQL 的拼接</p>
+<ul>
+<li>優點: 用標籤代替編寫邏輯代碼</li>
+<li>缺點: 拼接複雜 SQL 語句時，沒有代碼靈活，比較複雜</li>
+</ul>
+</li>
+<li><p>結果集與 Java 對象的自動映射</p>
+<ul>
+<li>優點: 暴政名稱相同即可自動映射</li>
+<li>缺點: 對開發人員所寫的 SQL 依賴性很強</li>
+</ul>
+</li>
+<li><p>編寫原生 SQL</p>
+<ul>
+<li><p>優點: 接近 JDBC, 很靈活</p>
+</li>
+<li><p>缺點: 對 SQL 語句依賴程度很高</p>
+<pre><code>      半自動
+
+ 數據庫移植不方便
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h1 id="DAO-層需求"><a href="#DAO-層需求" class="headerlink" title="DAO 層需求"></a>DAO 層需求</h1><ul>
+<li>對象能與數據庫交互</li>
+<li>能執行 SQL 語句</li>
+</ul>
+<h1 id="Mybatis-之-SqlSession"><a href="#Mybatis-之-SqlSession" class="headerlink" title="Mybatis 之 SqlSession"></a>Mybatis 之 SqlSession</h1><ul>
+<li>SqlSession 作用:<ul>
+<li>向 SQL 語句傳入參數</li>
+<li>執行 SQL 語句</li>
+<li>獲取執行 SQL 語句的結果</li>
+<li>事務的控制</li>
+</ul>
+</li>
+<li>如何得到 SqlSession:<ul>
+<li>通過配置文件獲取數據庫連接相關信息</li>
+<li>通過配置信息構建 SqlSessionFactory</li>
+<li>通過 SqlSessionFactory 打開數據庫會話(SqlSession)</li>
+</ul>
+</li>
+</ul>
+<h1 id="OGNL-表達式"><a href="#OGNL-表達式" class="headerlink" title="OGNL 表達式"></a>OGNL 表達式</h1><ul>
+<li>取值範圍: 標籤的屬性中</li>
+<li>取值寫法(大小寫敏感): <ul>
+<li>String 與基本數據類型: _parameter</li>
+<li>自定義類型(Message): 屬性名(如: command)</li>
+<li>集合:<ul>
+<li>數組: array</li>
+<li>List: list</li>
+<li>Map: _parameter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>操作符:<ul>
+<li>java 常用操作符: +, -, *, /, ==, !=, ||, &amp;&amp; 等</li>
+<li>自己特有操作符: and, or, mod, in, not in</li>
+</ul>
+</li>
+<li>從集合中取出一條數據<ul>
+<li>數組: <ul>
+<li>array[索引](String[ ])</li>
+<li>array[索引].屬性名(Message[ ])</li>
+</ul>
+</li>
+<li>List:<ul>
+<li>list[索引](List&lt;String&gt;)</li>
+<li>list[索引].屬性名(List&lt;Message&gt;)</li>
+</ul>
+</li>
+<li>Map:<ul>
+<li>_parameter.key(Map&lt;String, String&gt;) -&gt; _parameter 可省略</li>
+<li>key.屬性名(Map&lt;String, Message&gt;)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>利用 foreach 標籤從集合中取出數據<ul>
+<li>&lt;foreach collection=“array” index=“i” item=“item”&gt;<ul>
+<li>數組 -&gt;  i : 索引(下標), item : item</li>
+<li>List -&gt;  i : 索引(下標), item : item</li>
+<li>Map: -&gt; i : key, item : item.屬性名</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="常用標籤"><a href="#常用標籤" class="headerlink" title="常用標籤"></a>常用標籤</h1><ul>
+<li>定義 SQL 語句<ul>
+<li>insert</li>
+<li>delete</li>
+<li>update</li>
+<li>select</li>
+</ul>
+</li>
+<li>配置 java 對象屬性與查詢結果集中列名對應關係<ul>
+<li>resultMap</li>
+</ul>
+</li>
+<li>控制動態 SQL 拼接<ul>
+<li>foreach</li>
+<li>if</li>
+<li>choose</li>
+</ul>
+</li>
+<li>格式化輸出<ul>
+<li>where</li>
+<li>set</li>
+<li>trim -&gt; 可當作 where 或 set 標籤用</li>
+</ul>
+</li>
+<li>配置關聯關係<ul>
+<li>collection</li>
+<li>association</li>
+</ul>
+</li>
+<li>定義常量<ul>
+<li>sql</li>
+</ul>
+</li>
+<li>引用常量<ul>
+<li>include</li>
+</ul>
+</li>
+</ul>
+<h1 id="接口式編程"><a href="#接口式編程" class="headerlink" title="接口式編程"></a>接口式編程</h1><h2 id="動態代理過程"><a href="#動態代理過程" class="headerlink" title="動態代理過程"></a>動態代理過程</h2><h3 id="IMessage-queryMessageList"><a href="#IMessage-queryMessageList" class="headerlink" title="IMessage.queryMessageList()"></a>IMessage.queryMessageList()</h3><ol>
+<li><p>MapperProxy implements InvocationHandler</p>
+<p>類裡實現個方法: MapperProxy.invoke()</p>
+</li>
+<li><p>創建代理實例:</p>
+<p>Proxy.newProxyInstance(類加載器、接口、MapperProxy 對象)</p>
+</li>
+<li><p>由 sqlSession.getMapper() == Proxy.newProxyInstance() 獲取</p>
+</li>
+<li><p>觸發 invoke() 方法:</p>
+<p>IMessage iMessage == Proxy.newProxyInstance</p>
+<p>iMessage.queryMessageList() == MapperProxy.invoke()</p>
+</li>
+</ol>
+<h3 id="MapperProxy-invoke-sqlSession-selectList"><a href="#MapperProxy-invoke-sqlSession-selectList" class="headerlink" title="MapperProxy.invoke() == sqlSession.selectList()"></a>MapperProxy.invoke() == sqlSession.selectList()</h3><ol>
+<li><p>加載配置信息(Mybatis 中相關的類: Configuration)</p>
+</li>
+<li><p>因為: 接口全名稱.方法名 == namespace.id</p>
+</li>
+<li><p>所以: MapperProxy.invoke() 中有這樣一行代碼:</p>
+<p>sqlSession.selectList(namespace.id, parameter)</p>
+</li>
+</ol>
+<h3 id="IMessage-iMessage-Proxy-newProxyInstance"><a href="#IMessage-iMessage-Proxy-newProxyInstance" class="headerlink" title="IMessage iMessage =  Proxy.newProxyInstance()"></a>IMessage iMessage =  Proxy.newProxyInstance()</h3><h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p><strong>iMessage.queryMessageList(parameter) = sqlSession.selectList(namespace.id, parameter)</strong></p>
+<h1 id="攔截器"><a href="#攔截器" class="headerlink" title="攔截器"></a>攔截器</h1><ul>
+<li>要做什麼事<ul>
+<li>要攔截住</li>
+<li>攔截下來做甚麼事</li>
+<li>事情完成後要交回主權</li>
+</ul>
+</li>
+<li>注意事項<ul>
+<li>要攔截什麼樣的對象</li>
+<li>攔截對象什麼行為</li>
+<li>什麼時候攔截</li>
+</ul>
+</li>
+</ul>
+<h2 id="實例"><a href="#實例" class="headerlink" title="實例"></a>實例</h2><h3 id="開公司"><a href="#開公司" class="headerlink" title="開公司"></a>開公司</h3><ul>
+<li>成立代購公司: implements Interceptor</li>
+<li>註冊: plugin</li>
+<li>申報資產: property</li>
+<li>使用資產: setProperties()</li>
+<li>定位客戶群體: Plugin.wrap(), @Intercepts</li>
+<li>開始代購: intercept()</li>
+<li>過濾客戶: id.matches(“.+ByPage$”)</li>
+<li>獲取購票信息: page 對象</li>
+<li>購票: 原始 sql -&gt; pageSql</li>
+<li>送票: return invocation.proceed()</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
