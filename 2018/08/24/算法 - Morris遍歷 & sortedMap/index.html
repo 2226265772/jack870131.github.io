@@ -431,6 +431,153 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<h1 id="跳表結構"><a href="#跳表結構" class="headerlink" title="跳表結構"></a>跳表結構</h1><p>此種數據結構通常用於取代平衡樹(紅黑樹等)算法，插入和刪除結點較傳統平衡樹算法高效</p>
+<h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p><img src="https://github.com/jack870131/Markdown-Pic/blob/master/Picture/%E8%B7%B3%E8%A1%A8%E7%B5%90%E6%A7%8B.jpg?raw=true" alt=""></p>
+<p>比如我们想查找19，首先和6比较，大于6之后，在和9进行比较，然后在和12进行比较……最后比较到21的时候，发现21大于19，说明查找的点在17和21之间，从这个过程中，我们可以看出，查找的时候跳过了3、7、12等点，因此查找的复杂度为O(n/2) (參考文章: <a href="https://blog.csdn.net/ict2014/article/details/17394259" target="_blank" rel="noopener">https://blog.csdn.net/ict2014/article/details/17394259</a>)</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pers<span class="token punctuation">.</span>jack<span class="token punctuation">.</span>other<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>ArrayList<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Iterator<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SkipList</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SkipListNode</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> Integer value<span class="token punctuation">;</span>
+        <span class="token keyword">public</span> ArrayList<span class="token operator">&lt;</span>SkipListNode<span class="token operator">></span> nextNodes<span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token function">SkipListNode</span><span class="token punctuation">(</span>Integer value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span>
+            nextNodes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>SkipListNode<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SkipListIterator</span> <span class="token keyword">implements</span> <span class="token class-name">Iterator</span><span class="token operator">&lt;</span>Integer<span class="token operator">></span> <span class="token punctuation">{</span>
+        SkipListMain list<span class="token punctuation">;</span>
+        SkipListNode current<span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token function">SkipListIterator</span><span class="token punctuation">(</span>SkipListMain list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> list<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>current <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">getHead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> current<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">!=</span> null<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> Integer <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            current <span class="token operator">=</span> current<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> current<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SkipListMain</span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> SkipListNode head<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> maxLevel<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> size<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">double</span> PROBABILITY <span class="token operator">=</span> <span class="token number">0.5</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token function">SkipListMain</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            maxLevel <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            head <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SkipListNode</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            head<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> SkipListNode <span class="token function">getHead</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span>Integer newValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">contains</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                size<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token keyword">int</span> level <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> PROBABILITY<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    level<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>level <span class="token operator">></span> maxLevel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    head<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    maxLevel<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                SkipListNode newNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SkipListNode</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                SkipListNode current <span class="token operator">=</span> head<span class="token punctuation">;</span>
+                <span class="token keyword">do</span> <span class="token punctuation">{</span>
+                    current <span class="token operator">=</span> <span class="token function">findNext</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> current<span class="token punctuation">,</span> level<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    newNode<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> current<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>level<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    current<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>level<span class="token punctuation">,</span> newNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>level<span class="token operator">--</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">delete</span><span class="token punctuation">(</span>Integer deleteValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">contains</span><span class="token punctuation">(</span>deleteValue<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                SkipListNode deleteNode <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>deleteValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                size<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token keyword">int</span> level <span class="token operator">=</span> maxLevel<span class="token punctuation">;</span>
+                SkipListNode current <span class="token operator">=</span> head<span class="token punctuation">;</span>
+                <span class="token keyword">do</span> <span class="token punctuation">{</span>
+                    current <span class="token operator">=</span> <span class="token function">findNext</span><span class="token punctuation">(</span>deleteNode<span class="token punctuation">.</span>value<span class="token punctuation">,</span> current<span class="token punctuation">,</span> level<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>deleteNode<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> level<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        current<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>level<span class="token punctuation">,</span> deleteNode<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>level<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>level<span class="token operator">--</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// Returns the skiplist node with greatest value &lt;= e</span>
+        <span class="token keyword">private</span> SkipListNode <span class="token function">find</span><span class="token punctuation">(</span>Integer e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">find</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> head<span class="token punctuation">,</span> maxLevel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// Returns the skiplist node with greatest value &lt;= e</span>
+        <span class="token comment" spellcheck="true">// Starts at node start and level</span>
+        <span class="token keyword">private</span> SkipListNode <span class="token function">find</span><span class="token punctuation">(</span>Integer e<span class="token punctuation">,</span> SkipListNode current<span class="token punctuation">,</span> <span class="token keyword">int</span> level<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">do</span> <span class="token punctuation">{</span>
+                current <span class="token operator">=</span> <span class="token function">findNext</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> current<span class="token punctuation">,</span> level<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>level<span class="token operator">--</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> current<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// Returns the node at a given level with highest value less than e</span>
+        <span class="token keyword">private</span> SkipListNode <span class="token function">findNext</span><span class="token punctuation">(</span>Integer e<span class="token punctuation">,</span> SkipListNode current<span class="token punctuation">,</span> <span class="token keyword">int</span> level<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            SkipListNode next <span class="token operator">=</span> current<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>level<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>next <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                Integer value <span class="token operator">=</span> next<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">lessThan</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// e &lt; value</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                current <span class="token operator">=</span> next<span class="token punctuation">;</span>
+                next <span class="token operator">=</span> current<span class="token punctuation">.</span>nextNodes<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>level<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> current<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> size<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">contains</span><span class="token punctuation">(</span>Integer value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            SkipListNode node <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> node <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>value <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> <span class="token function">equalTo</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>value<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> Iterator<span class="token operator">&lt;</span>Integer<span class="token operator">></span> <span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SkipListIterator</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">/******************************************************************************
+         * Utility Functions *
+         ******************************************************************************/</span>
+
+        <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">lessThan</span><span class="token punctuation">(</span>Integer a<span class="token punctuation">,</span> Integer b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> a<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">equalTo</span><span class="token punctuation">(</span>Integer a<span class="token punctuation">,</span> Integer b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> a<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
             </div>
 
