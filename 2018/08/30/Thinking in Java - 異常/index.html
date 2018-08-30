@@ -1,0 +1,403 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主頁</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分類</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Java/">Java</a></li><li><a class="category-link" href="/categories/Linux/">Linux</a></li><li><a class="category-link" href="/categories/算法/">算法</a></li><li><a class="category-link" href="/categories/隨筆/">隨筆</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">歸檔</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/08/">August 2018</a></li><li><a class="archive-link" href="/archives/2018/07/">July 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tag/" title="標籤">
+		                標籤
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/about/" title="關於我">
+		                關於我
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/jack870131/Markdown-Pic/blob/master/Picture/java.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Thinking in Java - 異常</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="基本異常"><a href="#基本異常" class="headerlink" title="基本異常"></a>基本異常</h1><ul>
+<li><p><strong>異常情形(exceptional condition)</strong>是指阻止當前方法或作用域繼續執行的問題</p>
+</li>
+<li><p>拋出異常後，同 Java 中其他對象的創建一樣，將<strong>使用 new 在堆上創建異常對象</strong>。</p>
+<p>然當前的執行路徑被終止，並且從當前環境中<strong>彈出對異常對象的引用</strong>。</p>
+<p>異常處理機制接管程序，並開始尋找恰當的地方繼續執行程序(異常處理程序)</p>
+</li>
+<li><p>“拋出”一個異常:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>t <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NUllPointerException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>異常可以使得我們可以將每件事都當作一個<strong>事務</strong>來考慮，事務相當於計算機中的合同法，如果出了問題，只需要放棄整個計算</p>
+</li>
+</ul>
+<h1 id="異常參數"><a href="#異常參數" class="headerlink" title="異常參數"></a>異常參數</h1><ul>
+<li><p>標準異常類都有兩個構造器: 一個是<strong>默認構造器</strong>，另一個是<strong>接受字符串作為參數</strong>，以便能把相關信息放入異常對象的構造器</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NullPointerException</span><span class="token punctuation">(</span><span class="token string">"t = null"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>在使用 new 創建了異常對象之後，此對象的引用將傳給 throw</p>
+</li>
+<li><p>能夠拋出<strong>任意類型的 Throwable 對象</strong>，他是異常類型的<strong>根類</strong></p>
+</li>
+</ul>
+<h1 id="捕獲異常"><a href="#捕獲異常" class="headerlink" title="捕獲異常"></a>捕獲異常</h1><h2 id="try-塊"><a href="#try-塊" class="headerlink" title="try 塊"></a>try 塊</h2><ul>
+<li><p>在這個塊裡<strong>嘗試</strong>各種方法調用</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Code that might generate exceptions</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="異常處理程序"><a href="#異常處理程序" class="headerlink" title="異常處理程序"></a>異常處理程序</h2><ul>
+<li><p>緊跟在 try 塊之後，以關鍵字 catch 表示:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Code that might generate exceptions</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Type1 id1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Handle exceptions of Type1</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Type2 id2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Handle exceptions of Type2</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Type3 id3<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Handle exceptions of Type3</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h1 id="捕獲所有異常"><a href="#捕獲所有異常" class="headerlink" title="捕獲所有異常"></a>捕獲所有異常</h1><ul>
+<li><p>可以通過捕獲異常類型的基類 Exception 來做到這一點</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token string">"My Exception"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Caught Exception"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="棧軌跡"><a href="#棧軌跡" class="headerlink" title="棧軌跡"></a>棧軌跡</h2><ul>
+<li><p>printStackTrace() 方法將返回一個由棧軌跡中的元素所構成的數組，其中每一個元素都表示棧中的一幀</p>
+</li>
+<li><p>printStackTrace() 方法顯示的將是<strong>原來異常拋出點的調用棧信息</strong>，並非重新拋出點的信息，想要更新這個信息，可以調用 flllInStackTrace()  方法，浙江返回一個 <strong>Throwable</strong> 對象，他是通過把當前調用棧信息填入原來那個異常對象而建立的</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="重新拋出異常"><a href="#重新拋出異常" class="headerlink" title="重新拋出異常"></a>重新拋出異常</h2><ul>
+<li><p>有時希望把剛捕獲的異常重新拋出，尤其是在<strong>使用 Exception</strong> 捕獲所有異常的時候</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"An exception was thrown"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">throw</span> e<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>重拋異常會把異常拋給<strong>上一級環境中的異常處理程序</strong>，同一個 try 塊的後續 catch 子句將被忽略</p>
+</li>
+</ul>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Rethrowing</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"originating the exception in f()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token string">"thron from f()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">g</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Inside g(), e.printStackTrace()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">throw</span> e<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Inside h(), e.printStackTrace()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">throw</span> <span class="token punctuation">(</span>Exception<span class="token punctuation">)</span> e<span class="token punctuation">.</span><span class="token function">fillInStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token function">g</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"main: printStackTrace()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token function">h</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"main: printStackTrace()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*
+originating the exception in f()
+Inside g(), e.printStackTrace()
+java.lang.Exception: thron from f()
+    at pers.jack.example.exception.Rethrowing.f(Rethrowing.java:6)
+    at pers.jack.example.exception.Rethrowing.g(Rethrowing.java:11)
+    at pers.jack.example.exception.Rethrowing.main(Rethrowing.java:31)
+main: printStackTrace()
+java.lang.Exception: thron from f()
+    at pers.jack.example.exception.Rethrowing.f(Rethrowing.java:6)
+    at pers.jack.example.exception.Rethrowing.g(Rethrowing.java:11)
+    at pers.jack.example.exception.Rethrowing.main(Rethrowing.java:31)
+originating the exception in f()
+Inside h(), e.printStackTrace()
+java.lang.Exception: thron from f()
+    at pers.jack.example.exception.Rethrowing.f(Rethrowing.java:6)
+    at pers.jack.example.exception.Rethrowing.h(Rethrowing.java:21)
+    at pers.jack.example.exception.Rethrowing.main(Rethrowing.java:37)
+main: printStackTrace()
+java.lang.Exception: thron from f()
+    at pers.jack.example.exception.Rethrowing.h(Rethrowing.java:25)
+    at pers.jack.example.exception.Rethrowing.main(Rethrowing.java:37)
+*/</span>
+</code></pre>
+<h1 id="Java-標準異常"><a href="#Java-標準異常" class="headerlink" title="Java 標準異常"></a>Java 標準異常</h1><ul>
+<li>Throwable 這個 Java 類被用來表示人和可以作為異常被拋出的類，Trowable 對象可以被分為兩種類型(從 Throwable 繼承):<ul>
+<li>Error: 用來表示編譯時和系統錯誤(一般可以不用關心)</li>
+<li>Exception: 是可以被拋出的基本類型，在 Java 類庫，用戶方法以及運行故障中都可能拋出 Exception 異常</li>
+</ul>
+</li>
+</ul>
+<h2 id="RuntimeException"><a href="#RuntimeException" class="headerlink" title="RuntimeException"></a>RuntimeException</h2><ul>
+<li>屬於運行時異的類型很多，他們會自動被 Java 虛擬基拋出，所以不必在異常說明中把他們列出來，這些異常都是從 RuntimeException 類型的異常</li>
+<li>RuntimeException 類型的異常也被稱為”<strong>不受檢查異常</strong>“，這種異常將被自動捕獲，不必自己去檢查</li>
+<li><strong>注意</strong>: 只能在代碼中忽略 RuntimeException (及其子類)類型的異常，其他類型異常的處理都是由編譯器強制實施的</li>
+<li>RuntimeException 代表的是<strong>編程錯誤</strong>:<ul>
+<li>無法預料的錯誤，比如從控制範圍之外傳遞進來的 null 引用</li>
+</ul>
+</li>
+</ul>
+<h1 id="使用-finally-進行清理"><a href="#使用-finally-進行清理" class="headerlink" title="使用 finally 進行清理"></a>使用 finally 進行清理</h1><ul>
+<li>無論 try 塊中的異常是否拋出，他都能得到執行，這通常是用於<strong>內存回收之外</strong>的情況因為回收由垃圾回收器完成</li>
+<li>finally 能保證: 無論 try 塊裡發生了什麼，內存總能得到釋放，但 Java 有垃圾回收機制，所以內存釋放不再是問題</li>
+<li>當要把廚內存之外的資源回復到他們的初始狀態時，就要用到 finally 子句</li>
+</ul>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">ThreeException</span> <span class="token keyword">extends</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FinallyWorks</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>count<span class="token operator">++</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ThreeException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"No exception"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>ThreeException e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"ThreeException"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"In finally clause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="把”被檢查的異常”轉換為”不檢查的異常”"><a href="#把”被檢查的異常”轉換為”不檢查的異常”" class="headerlink" title="把”被檢查的異常”轉換為”不檢查的異常”"></a>把”被檢查的異常”轉換為”不檢查的異常”</h1><ul>
+<li>可以直接把”被檢查的異常”包裝進<strong>RuntimeException</strong>裡面:</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// ... to do something useful</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>IDontKnowWhatToDoWithThisCheckedException e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="異常使用指南"><a href="#異常使用指南" class="headerlink" title="異常使用指南"></a>異常使用指南</h1><ul>
+<li>應該在以下情況使用異常:<ul>
+<li>在恰當的級別處理問題(在知道該如何處理得情況下才捕獲異常)</li>
+<li>解決問題並且重新調用產生異常的方法</li>
+<li>進行少許修補，然後繞過異常發生的地方繼續執行</li>
+<li>用別的數據進行計算，以代替方法預計會返回的職</li>
+<li>把當前雲型環境下能做的事情盡量做完，然後把<strong>相同的</strong>異常重拋到更高層</li>
+<li>把當前運行環境下能做的事情盡量做完，然後把<strong>不同的</strong>異常拋到更高層</li>
+<li>終止程序</li>
+<li>進行簡化(如果異常模式使問題變得太複雜，那用起來會非常煩人)</li>
+<li>讓類庫和程序更安全(這既是在為調適做短期投資，也是在為程序的健壯型做長期投資)</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'OlLQYQlJY8qm9uU7lwnUdFRY-gzGzoHsz',
+        app_key: 'sQUmq7qfkKfSPQtaijMu0CSJ',
+        placeholder: 'Please leave your footprints',
+        pageSize: '5',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018總訪問量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
