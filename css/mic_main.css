@@ -390,7 +390,7 @@
 	}
 
 	.typo {
-		background-color: #F8F8F5;
+		background-color: #fafafa;
 	}
 
 	body, input, select, textarea {
@@ -428,7 +428,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: "Source Sans Pro", "微軟正黑體", fantasy;
-		font-weight: 900;
+		font-weight: bold;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
@@ -442,7 +442,7 @@
 		}
 
 	h1 {
-		font-size: 4rem;
+		font-size: 2rem;
 		line-height: 1.1;
 		margin: 0 0 2rem 0;
 	}
